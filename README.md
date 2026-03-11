@@ -1,7 +1,28 @@
-# Portfolio site
-younnihan.com/
+# 🖥️ Younnihan Portfolio
 
-## 폴더 구조
+Next.js 기반으로 제작, GitHub Pages를 통해 배포
+🔗 **Live Site**  
+https://younnihan.com
+
+---
+
+# 🛠 Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- SCSS Modules
+
+### Deployment
+
+- GitHub Pages
+- Static Export (`next export`)
+
+---
+
+## 📁 Project Structure
 
 ```text
   src/
