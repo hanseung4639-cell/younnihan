@@ -1,0 +1,180 @@
+@font-face {
+  font-family: Archivo;
+  src: url("/page1/assets/fonts/archivo-700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: HeroNavigation;
+  src: url("/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: CaseStudy;
+  src: url("/_next/static/media/ce62453a442c7f35-s.p.124b2306.woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Shared navigation and contact footer. Scoped to avoid legacy page styles. */
+.portfolio-header {
+  box-sizing: border-box;
+  width: min(1200px, calc(100% - 80px));
+  margin-inline: auto;
+  padding-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  font-family: HeroNavigation, Arial, sans-serif;
+}
+.portfolio-header a {
+  color: inherit;
+  text-decoration: none;
+}
+.portfolio-header .logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+}
+.portfolio-header .location {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--header-muted, #66676c);
+}
+.portfolio-header > a:last-child {
+  font-size: 18px;
+  font-weight: 500;
+}
+.portfolio-header a:hover {
+  color: var(--header-accent, #007d62);
+}
+.portfolio-header a:focus-visible {
+  outline: 2px solid #008e70;
+  outline-offset: 8px;
+}
+.site-footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 64px 0 80px;
+  border-top: 1px solid #dedee4;
+  background: #f6f6f9;
+  color: #25262a;
+  font-family: CaseStudy, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 400;
+  text-align: left;
+  color-scheme: light;
+}
+.site-footer *,
+.site-footer *::before,
+.site-footer *::after {
+  box-sizing: border-box;
+}
+.site-footer .footer-inner {
+  width: min(1200px, calc(100% - 80px));
+  margin-inline: auto;
+}
+.site-footer .footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.site-footer .footer-message {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.site-footer .footer-title {
+  position: relative;
+  font-family: Archivo, CaseStudy, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+}
+.site-footer .footer-title::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  background: #efaa2d;
+  border-radius: 3px;
+  left: 57px;
+  top: -6px;
+  transform: rotate(15deg);
+}
+.site-footer .footer-copy {
+  font-size: 16px;
+  line-height: 22px;
+  color: #707177;
+  margin: 0;
+}
+.site-footer .footer-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin: 0;
+}
+.site-footer .footer-links a {
+  font: inherit;
+  font-size: 16px;
+  color: #25262a;
+  text-decoration: none;
+  padding-block: 12px;
+  transition: color 0.18s;
+}
+.site-footer .footer-links a:hover {
+  color: #007d62;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.site-footer a:focus-visible {
+  outline: 2px solid #007d62;
+  outline-offset: 5px;
+}
+.site-footer .footer-copyright {
+  color: #74757c;
+  font-size: 14px;
+  margin: 44px 0 0;
+}
+@media (max-width: 900px) {
+  .site-footer .footer-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio-header,
+  .site-footer .footer-inner {
+    width: calc(100% - 40px);
+  }
+  .portfolio-header {
+    gap: 16px;
+  }
+  .site-footer .footer-message {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .site-footer .footer-links {
+    gap: 32px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-footer a {
+    transition: none;
+  }
+}
