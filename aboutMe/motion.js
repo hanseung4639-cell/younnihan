@@ -3,7 +3,7 @@
   if (!slots.length || !('IntersectionObserver' in window)) return;
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const compact = matchMedia('(max-width: 760px)');
+  const compact = matchMedia('(max-width: 1023px)');
   const visible = new Set();
   const positions = new Map(slots.map(slot => [slot, {
     photo: slot.querySelector('.about-photo'),

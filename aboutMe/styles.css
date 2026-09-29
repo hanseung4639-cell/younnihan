@@ -78,6 +78,9 @@ a:focus-visible {
 .story-photo {
   margin-top: 122px;
 }
+.gallery-photo {
+  order: -1;
+}
 .biography h1 {
   font-size: 32px;
   line-height: 1.4;
@@ -111,7 +114,7 @@ a:focus-visible {
   position: absolute;
   inset: 0;
 }
-@media (min-width: 761px) and (prefers-reduced-motion: no-preference) {
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
   .photo-slot[data-follow] .about-photo {
     position: relative;
     top: auto;
@@ -257,21 +260,41 @@ a:focus-visible {
     flex-direction: column;
   }
 }
-@media (max-width: 760px) {
-  .about-wrap {
-    width: calc(100% - 40px);
-    margin: 64px auto 80px;
-  }
+/* Keep the reading order and full-width text through tablet sizes. */
+@media (max-width: 1023px) {
   .story-row,
   .experience-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
   }
   .story-photo { margin-top: 0; }
+  .gallery-photo { order: 0; }
   .about-photo { position: relative; top: auto; }
   .experience-row { margin-top: 64px; }
-  .gallery-photo { order: 1; }
-  .biography h1 { font-size: clamp(25px, 5vw, 32px); }
+}
+@media (max-width: 760px) {
+  .about-wrap {
+    width: calc(100% - 40px);
+    margin: 48px auto 64px;
+  }
+  .biography h1 {
+    font-size: clamp(26px, 6.7vw, 32px);
+    line-height: 1.3;
+    margin-bottom: 28px;
+    text-wrap: pretty;
+  }
+  .experience > h2 { font-size: 26px; margin-bottom: 20px; }
+  .experience-list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    padding-block: 20px;
+  }
+  .experience-list li + li { border-top: 1px solid #e1e1e7; }
+  .experience-list .date { grid-column: 1; }
+  .education-list { padding-block: 0; margin-top: 4px; }
+  .more-about { margin-top: 28px; padding: 20px; gap: 16px; }
+  .more-links { width: 100%; }
+  .pill-link { min-height: 44px; flex: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   .about-photo { position: relative; top: auto; }

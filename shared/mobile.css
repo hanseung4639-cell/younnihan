@@ -1,0 +1,62 @@
+/* Opt-in mobile navigation/footer: loaded by Main, About and Page1 only. */
+@media (max-width: 760px) {
+  .portfolio-header,
+  .site-footer .footer-inner {
+    width: calc(100% - 40px);
+  }
+  .portfolio-header {
+    padding-top: 24px;
+    gap: 12px;
+  }
+  .portfolio-header .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .portfolio-header > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .portfolio-header .location {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .portfolio-header > a:last-child {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .site-footer {
+    padding: 48px 0 max(40px, env(safe-area-inset-bottom));
+  }
+  .site-footer .footer-row,
+  .site-footer .footer-message {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .site-footer .footer-title,
+  .about-page .site-footer .footer-title {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .site-footer .footer-title::before {
+    left: 50px;
+  }
+  .site-footer .footer-copy,
+  .site-footer .footer-links a {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .site-footer .footer-links {
+    flex-wrap: wrap;
+    gap: 8px 28px;
+  }
+  .site-footer .footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .site-footer .footer-copyright {
+    margin-top: 32px;
+  }
+}
