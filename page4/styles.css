@@ -31,3 +31,5 @@
 /* Slightly reduce the hero title to leave more space beside the mockup. */
 @media(min-width:1280px){.hero h1{font-size:clamp(38px,3.05vw,54px)}}
 @media(min-width:761px) and (max-width:1279px){.hero h1{font-size:40px}}
+/* Reduce the impact overview's mobile mockups without changing their ratios. */
+.impact .phone-pair{width:80%;justify-self:center}

@@ -327,3 +327,7 @@
  .reflection-reference-line+.reflection-reference-line::before{content:' '}
 }
 @media(min-width:1280px){.reflection-list li{grid-template-columns:40px calc(43.5% - 49px) minmax(0,1fr)}}
+/* Bring Result closer to the final design mockups. */
+.final-design{padding-bottom:32px}
+.results{padding-top:40px}
+@media(max-width:760px){.final-design{padding-bottom:24px}.results{padding-top:32px}}
