@@ -1,0 +1,218 @@
+{
+  "figma_node": "252:1737",
+  "slots": [
+    {
+      "node": "252:2095",
+      "asset": "/page3/assets/5f5f8.svg",
+      "alt": ""
+    },
+    {
+      "node": "442:333",
+      "asset": "/page3/assets/4b95d.png",
+      "alt": "Hyundai SUV behind the mobile experience"
+    },
+    {
+      "node": "252:1803",
+      "asset": "/page3/assets/930d6.png",
+      "alt": "Markets across the Middle East, Asia and Europe"
+    },
+    {
+      "node": "469:187",
+      "asset": "/page3/assets/796d1.png",
+      "alt": "Hyundai vehicle browsing interface on an iPhone held in a hand"
+    },
+    {
+      "node": "472:193",
+      "asset": "/page3/assets/40002.png",
+      "alt": "Information architecture reorganized across four customer types"
+    },
+    {
+      "node": "472:195",
+      "asset": "/page3/assets/67c67.svg",
+      "alt": ""
+    },
+    {
+      "node": "480:749",
+      "asset": "/page3/assets/67c67.svg",
+      "alt": ""
+    },
+    {
+      "node": "473:614",
+      "asset": "/page3/assets/67c67.svg",
+      "alt": ""
+    },
+    {
+      "node": "472:199",
+      "asset": "/page3/assets/812a7.png",
+      "alt": "Survey findings and ratings across regional markets"
+    },
+    {
+      "node": "472:201",
+      "asset": "/page3/assets/f4ffb.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "547:185",
+      "asset": "/page3/assets/72b83.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "252:1865",
+      "asset": "/page3/assets/17572.png",
+      "alt": "Customer journey mapping and competitive benchmarks"
+    },
+    {
+      "node": "472:203",
+      "asset": "/page3/assets/3a795.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "473:510",
+      "asset": "/page3/assets/d11b6.svg",
+      "alt": ""
+    },
+    {
+      "node": "473:512",
+      "asset": "/page3/assets/d11b6.svg",
+      "alt": ""
+    },
+    {
+      "node": "473:516",
+      "asset": "/page3/assets/d11b6.svg",
+      "alt": ""
+    },
+    {
+      "node": "473:511",
+      "asset": "/page3/assets/d11b6.svg",
+      "alt": ""
+    },
+    {
+      "node": "473:513",
+      "asset": "/page3/assets/d11b6.svg",
+      "alt": ""
+    },
+    {
+      "node": "473:534",
+      "asset": "/page3/assets/9ad46.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "473:536",
+      "asset": "/page3/assets/a8907.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "473:541",
+      "asset": "/page3/assets/9ad46.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "473:548",
+      "asset": "/page3/assets/271b9.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "491:291",
+      "asset": "/page3/assets/505a5.svg",
+      "alt": ""
+    },
+    {
+      "node": "477:706",
+      "asset": "/page3/assets/0c2ab.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "480:751",
+      "asset": "/page3/assets/0c2ab.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "480:752",
+      "asset": "/page3/assets/0c2ab.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "477:671",
+      "asset": "/page3/assets/fb21f.png",
+      "alt": "AEM carousel component configuration"
+    },
+    {
+      "node": "477:682",
+      "asset": "/page3/assets/97b19.svg",
+      "alt": ""
+    },
+    {
+      "node": "477:691",
+      "asset": "/page3/assets/8a190.svg",
+      "alt": ""
+    },
+    {
+      "node": "477:693",
+      "asset": "/page3/assets/40327.svg",
+      "alt": ""
+    },
+    {
+      "node": "477:695",
+      "asset": "/page3/assets/8a190.svg",
+      "alt": ""
+    },
+    {
+      "node": "477:698",
+      "asset": "/page3/assets/81fcb.png",
+      "alt": "Hyundai customer experience example"
+    },
+    {
+      "node": "477:703",
+      "asset": "/page3/assets/8a190.svg",
+      "alt": ""
+    },
+    {
+      "node": "483:169",
+      "asset": "/page3/assets/f6f94.svg",
+      "alt": ""
+    },
+    {
+      "node": "488:196",
+      "asset": "/page3/assets/f2b12.svg",
+      "alt": ""
+    },
+    {
+      "node": "488:227",
+      "asset": "/page3/assets/f2b12.svg",
+      "alt": ""
+    },
+    {
+      "node": "488:235",
+      "asset": "/page3/assets/32ad5.svg",
+      "alt": ""
+    },
+    {
+      "node": "477:720",
+      "asset": "/page3/assets/8a190.svg",
+      "alt": ""
+    },
+    {
+      "node": "477:733",
+      "asset": "/page3/assets/83bd9.png",
+      "alt": "Completed AEM carousel component"
+    },
+    {
+      "node": "488:193",
+      "asset": "/page3/assets/8a190.svg",
+      "alt": ""
+    },
+    {
+      "node": "488:187",
+      "asset": "/page3/assets/8a190.svg",
+      "alt": ""
+    }
+  ],
+  "video": {
+    "asset": "/page3/assets/interaction-swipe-loop.mp4",
+    "slot": "bilingual comparison",
+    "source": "Interaction_Swipe_Loop_7s_4K.mp4",
+    "width": 3840,
+    "height": 2160,
+    "duration_seconds": 7
+  }
+}

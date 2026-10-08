@@ -1,1022 +1,682 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Hyundai Payment UX — Younni Han</title>
-    <meta
-      name="description"
-      content="Making checkout fast without taking away what people wanted to check. A payment UX case study by Younni Han."
-    />
-    <meta name="theme-color" content="#1e1f20" />
-    <link rel="icon" href="/favicon.ico" />
-    <link
-      rel="preload"
-      href="/_next/static/media/ce62453a442c7f35-s.p.124b2306.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/page1/assets/fonts/archivo-700.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link rel="stylesheet" href="/page1/styles.css?v=20260929-mobile" />
-    <script src="/page1/media.js" defer></script>
-    <link rel="stylesheet" href="/shared/site.css" />
-    <link rel="stylesheet" href="/shared/mobile.css?v=20260929-mobile" />
-    <script src="/shared/site.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#case-study">Skip to case study</a>
-    <div class="desktop-canvas">
-      <div class="hero">
-        <header class="site-header portfolio-header">
-          <a href="/" aria-label="Younni Han — All work"
-            ><img
-              style="--native-width: 60px"
-              class="logo"
-              src="/page1/assets/logo.png"
-              width="60"
-              height="60"
-              alt="Younni Han"
-          /></a>
-          <span class="location">Based in Ireland</span>
-          <a href="/aboutMe/">About me</a>
-        </header>
-        <div class="hero-grid wrap">
-          <div>
-            <p class="hero-kicker">PAYMENT · THE HYUNDAI</p>
-            <h1>
-              Making checkout fast<br />
-              without taking away<br />
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>The Hyundai Payment UX — Younni Han</title>
+<meta content="Making checkout fast without taking away what people wanted to check. A payment UX case study by Younni Han." name="description"/>
+<meta content="#1e1f20" name="theme-color"/>
+<link href="/favicon.ico" rel="icon"/>
+<link as="font" crossorigin="" href="/_next/static/media/ce62453a442c7f35-s.p.124b2306.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="/page1/assets/fonts/archivo-700.ttf" rel="preload" type="font/ttf"/>
+<link href="/page1/styles.css?v=20260929-mobile" rel="stylesheet"/>
+<script defer="" src="/page1/media.js"></script>
+<link href="/shared/site.css" rel="stylesheet"/>
+<link href="/shared/mobile.css?v=20260929-mobile" rel="stylesheet"/>
+<script defer="" src="/shared/site.js"></script>
+<link href="/page1/figma-mockups.css" rel="stylesheet"/><script defer="" src="/page1/figma-mockups.js"></script><link href="/page1/figma-colors.css" rel="stylesheet"/><link href="/shared/project-navigation.css" rel="stylesheet"/></head>
+<body>
+<a class="skip-link" href="#case-study">Skip to case study</a>
+<div class="desktop-canvas">
+<div class="hero">
+<header class="site-header portfolio-header">
+<a aria-label="Younni Han — All work" href="/"><img alt="Younni Han" class="logo" height="60" src="/page1/assets/logo.png" style="--native-width: 60px" width="60"/></a>
+<span class="location">Based in Ireland</span>
+<a href="/aboutMe/">About me</a>
+</header>
+<div class="hero-grid wrap">
+<div>
+<p class="hero-kicker">PAYMENT · THE HYUNDAI</p>
+<h1>
+              Making checkout fast<br/>
+              without taking away<br/>
               what people wanted to check
             </h1>
-            <dl class="project-meta">
-              <div>
-                <dt>My role</dt>
-                <dd>
-                  I owned funnel diagnosis,<br /> payment UX, customer<br /> interviews,
+<dl class="project-meta">
+<div>
+<dt>My role</dt>
+<dd>
+                  I owned funnel diagnosis,<br/> payment UX, customer<br/> interviews,
                   and design QA.
                 </dd>
-              </div>
-              <div>
-                <dt>Tools</dt>
-                <dd>GA4 Analysis<br />Figma</dd>
-              </div>
-              <div>
-                <dt>Team</dt>
-                <dd>Me<br />PM<br />1 Developer</dd>
-              </div>
-              <div>
-                <dt>Timeline</dt>
-                <dd>
-                  <span class="text-unit">March 2026 · 3 months</span>
-                </dd>
-              </div>
-            </dl>
-          </div>
-          <div>
-            <figure
-              class="hero-media"
-              aria-label="The Hyundai checkout preview"
-            >
-              <img
-                style="--native-width: 314px"
-                id="hero-poster"
-                src="/page1/assets/hero-poster.png"
-                width="314"
-                height="649"
-                alt="The Hyundai checkout: payment amount, discounts, H.Point rewards and Buy Now on one screen"
-                fetchpriority="high"
-              />
-              <video
-                id="hero-video"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                poster="/page1/assets/hero-poster.png"
-                aria-label="The Hyundai checkout demonstration"
-                hidden
-              ></video>
-            </figure>
-          </div>
-        </div>
-      </div>
-      <main id="case-study">
-        <section class="impact wrap" aria-labelledby="impact-title">
-          <h2 id="impact-title">Impact overview</h2>
-          <div class="metrics">
-            <article class="metric">
-              <h3>Completed purchases</h3>
-              <div class="metric-row">
-                <div class="metric-value">+74.7%</div>
-                <div class="metric-detail">
-                  <strong>+11,452</strong>
-                  <p>15,326 → 26,778<br />Compared with the previous month</p>
-                </div>
-              </div>
-            </article>
-            <article class="metric">
-              <h3>Checkout completion time</h3>
-              <div class="metric-value">85.7% <small>faster</small></div>
-              <p>42s → 6s<br />Time to complete checkout</p>
-            </article>
-            <article class="metric">
-              <h3>GA4 funnel · Monthly comparison</h3>
-              <div class="months">
-                <div>
-                  <span>May</span><strong>15,326</strong>
-                  <p>completed purchases</p>
-                </div>
-                <div>
-                  <span>June</span><strong>26,778</strong>
-                  <p>completed purchases</p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="stakes two-col">
-            <article>
-              <span class="muted">Stakes</span>
-              <h2>Ready to buy. Still working to pay.</h2>
-              <p>
+</div>
+<div>
+<dt>Tools</dt>
+<dd>GA4 Analysis<br/>Figma</dd>
+</div>
+<div>
+<dt>Team</dt>
+<dd>Me<br/>PM<br/>1 Developer</dd>
+</div>
+<div>
+<dt>Timeline</dt>
+<dd>
+<span class="text-unit">March 2026 · 3 months</span>
+</dd>
+</div>
+</dl>
+</div>
+<div>
+<figure aria-label="The Hyundai checkout preview" class="hero-media">
+<img alt="The Hyundai checkout: payment amount, discounts, H.Point rewards and Buy Now on one screen" fetchpriority="high" height="649" id="hero-poster" src="/page1/assets/hero-poster.png" style="--native-width: 314px" width="314"/>
+<video aria-label="The Hyundai checkout demonstration" autoplay="" hidden="" id="hero-video" loop="" muted="" playsinline="" poster="/page1/assets/hero-poster.png" preload="auto"></video>
+</figure>
+</div>
+</div>
+</div>
+<main id="case-study">
+<section aria-labelledby="impact-title" class="impact wrap">
+<h2 id="impact-title">Impact overview</h2>
+<div class="metrics figma-lines">
+<article class="metric">
+<h3>Completed purchases</h3>
+<div class="metric-row">
+<div class="metric-value">+74.7%</div>
+<div class="metric-detail">
+<strong>+11,452</strong>
+<p>15,326 → 26,778<br/>Compared with the previous month</p>
+</div>
+</div>
+</article>
+<article class="metric">
+<h3>Checkout completion time</h3>
+<div class="metric-value">85.7% <small>faster</small></div>
+<p>42s → 6s<br/>Time to complete checkout</p>
+</article>
+<article class="metric">
+<h3>GA4 funnel · Monthly comparison</h3>
+<div class="months">
+<div>
+<span>May</span><strong>15,326</strong>
+<p>completed purchases</p>
+</div>
+<div>
+<span>June</span><strong>26,778</strong>
+<p>completed purchases</p>
+</div>
+</div>
+</article>
+<span aria-hidden="true" class="figma-line rule-top"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span><span aria-hidden="true" class="figma-line rule-bottom"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span></div>
+<div class="stakes two-col">
+<article>
+<span class="muted">Stakes</span>
+<h2>Ready to buy. Still working to pay.</h2>
+<p>
                 Picture a 47-year-old VIP member opening the app at 11 pm. She’s
                 picked her item and has points ready to spend.
               </p>
-              <p>
+<p>
                 She taps <strong>Buy</strong> and then spends 42 seconds
                 scrolling through a form to confirm things she already knows.
               </p>
-              <p>
+<p>
                 72% of shoppers who reached that form never finished paying.
               </p>
-            </article>
-            <article>
-              <span class="muted">Problem</span>
-              <h2>Why we started</h2>
-              <p>
+</article>
+<article>
+<span class="muted">Problem</span>
+<h2>Why we started</h2>
+<p>
                 The purchase conversion rate was <strong>28%</strong>, and
                 customers were dropping off during checkout.
               </p>
-              <p>
-                <strong>Our goal</strong> was to reduce checkout friction and
+<p>
+<strong>Our goal</strong> was to reduce checkout friction and
                 help more customers complete their purchases.
               </p>
-            </article>
-          </div>
-        </section>
-        <section class="journey" aria-labelledby="journey-title">
-          <div class="wrap">
-            <p class="muted">Before</p>
-            <h2 id="journey-title">What we found</h2>
-            <p class="lead">
+</article>
+</div>
+</section>
+<section aria-labelledby="journey-title" class="journey">
+<div class="wrap">
+<p class="muted">Before</p>
+<h2 id="journey-title">What we found</h2>
+<p class="lead">
               The existing purchase journey took an average of
-              <strong>42 seconds</strong>, from selecting a product to<br
-                class="desktop-break"
-              />
+              <strong>42 seconds</strong>, from selecting a product to<br class="desktop-break"/>
               completing payment. Analysing this journey revealed that customers
               were dropping off at the payment stage.
             </p>
-            <h3>Purchase journey</h3>
-            <div class="journey-grid">
-              <figure>
-                <figcaption>1. Product list</figcaption>
-                <img
-                  style="--native-width: 222px"
-                  src="/page1/assets/journey-list.png"
-                  width="222"
-                  height="465"
-                  alt="Product listing at the beginning of the purchase journey"
-                  loading="lazy"
-                />
-              </figure>
-              <figure>
-                <figcaption>2. Product details</figcaption>
-                <img
-                  style="--native-width: 222px"
-                  src="/page1/assets/journey-product.png"
-                  width="222"
-                  height="465"
-                  alt="Product detail screen with the Buy Now action"
-                  loading="lazy"
-                />
-              </figure>
-              <figure>
-                <figcaption>3. Checkout</figcaption>
-                <img
-                  style="--native-width: 222px"
-                  src="/page1/assets/journey-checkout.png"
-                  width="222"
-                  height="465"
-                  alt="Original checkout screen with payment action at the bottom"
-                  loading="lazy"
-                />
-              </figure>
-              <figure class="long-form">
-                <img
-                  style="--native-width: 247px"
-                  src="/page1/assets/journey-form.png"
-                  width="247"
-                  height="572"
-                  alt="Long checkout form containing customer information, shipping, order items and discounts"
-                  loading="lazy"
-                />
-              </figure>
-              <aside class="journey-issues">
-                <h4>Key checkout issues</h4>
-                <ol>
-                  <li>
-                    <span
-                      ><strong
-                        >A payment button that doesn’t stay visible</strong
-                      ></span
-                    >
-                  </li>
-                  <li>
-                    <span><strong>A long page to scroll through</strong></span>
-                  </li>
-                  <li>
-                    <span
-                      >Discounts, points and
-                      <strong>payment are spread across sections</strong></span
-                    >
-                  </li>
-                </ol>
-              </aside>
-            </div>
-          </div>
-        </section>
-        <section class="approach two-col wrap" aria-labelledby="approach-title">
-          <div>
-            <p class="eyebrow">APPROACH</p>
-            <h2 class="section-title" id="approach-title">
-              How I tackled<br />the problem
+<h3>Purchase journey</h3>
+<div class="journey-grid">
+<figure>
+<figcaption>1. Product list</figcaption>
+<div aria-label="Product listing at the beginning of the purchase journey" class="figma-mockup figma-journey-list" data-node-id="557:208" role="img" style="--figma-width:228.0;--figma-height:474.0;opacity:.4">
+<div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+<img alt="" decoding="async" loading="lazy" src="/page1/assets/figma/52bef.png" style="position:absolute;height:105.76%;left:-8.08%;max-width:none;top:-3.68%;width:330.5%"/>
+</div>
+</div>
+</figure>
+<figure>
+<figcaption>2. Product details</figcaption>
+<div aria-label="Product detail screen with the Buy Now action" class="figma-mockup figma-journey-product" data-node-id="557:212" role="img" style="--figma-width:223.0;--figma-height:473.0;opacity:.4">
+<div style="position:absolute;inset:0;overflow:hidden;pointer-events:none">
+<img alt="" decoding="async" loading="lazy" src="/page1/assets/figma/52bef.png" style="position:absolute;height:105.76%;left:-116.36%;max-width:none;top:-3.68%;width:336.1%"/>
+</div>
+</div>
+</figure>
+<figure>
+<figcaption>3. Checkout</figcaption>
+<div aria-label="Original checkout screen with payment action at the bottom" class="figma-mockup figma-journey-checkout" data-node-id="557:217" role="img" style="--figma-width:223.0;--figma-height:466.0"><img alt="" class="figma-retina-image" decoding="async" height="1398" loading="lazy" src="/page1/assets/figma/retina/557-217.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/52bef.png);mask-mode:alpha;mask-size:337.24% 107.39%;mask-position:94.51610183780137% 50.608930987821374%;mask-repeat:no-repeat" width="669"/></div>
+</figure>
+<figure class="long-form">
+<div aria-label="Long checkout form containing customer information, shipping, order items and discounts" class="figma-mockup figma-journey-form" data-node-id="557:222" role="img" style="--figma-width:246.0;--figma-height:591.0"><img alt="" class="figma-retina-image" decoding="async" height="1773" loading="lazy" src="/page1/assets/figma/retina/557-222.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/1fb3a.png);mask-mode:alpha;mask-size:100.01% 255.64%;mask-position:99.99999999994884% 3.1033153430994607%;mask-repeat:no-repeat" width="738"/></div>
+</figure>
+<aside class="journey-issues">
+<h4>Key checkout issues</h4>
+<ol>
+<li>
+<span><strong>A payment button that doesn’t stay visible</strong></span>
+</li>
+<li>
+<span><strong>A long page to scroll through</strong></span>
+</li>
+<li>
+<span>Discounts, points and
+                      <strong>payment are spread across sections</strong></span>
+</li>
+</ol>
+</aside>
+</div>
+</div>
+</section>
+<section aria-labelledby="approach-title" class="approach two-col wrap">
+<div>
+<p class="eyebrow">APPROACH</p>
+<h2 class="section-title" id="approach-title">
+              How I tackled<br/>the problem
             </h2>
-          </div>
-          <ol>
-            <li><a href="#step-01">Shipped a bottom-sheet checkout</a></li>
-            <li><a href="#step-02">Reversed the information order</a></li>
-            <li>
-              <a href="#step-03"
-                >32 days of data showed<br />
-                customers cancelling and buying again</a
-              >
-            </li>
-          </ol>
-        </section>
-        <section
-          class="step wrap divider"
-          id="step-01"
-          aria-labelledby="step-one-title"
-        >
-          <header class="step-heading">
-            <p class="eyebrow">STEP 01</p>
-            <h2 id="step-one-title">
+</div>
+<ol>
+<li><a href="#step-01">Shipped a bottom-sheet checkout</a></li>
+<li><a href="#step-02">Reversed the information order</a></li>
+<li>
+<a href="#step-03">32 days of data showed<br/>
+                customers cancelling and buying again</a>
+</li>
+</ol>
+</section>
+<section aria-labelledby="step-one-title" class="step wrap divider" id="step-01">
+<header class="step-heading">
+<p class="eyebrow">STEP 01</p>
+<h2 id="step-one-title">
               Shipped a bottom-sheet checkout in three weeks instead of
               rebuilding the form
             </h2>
-          </header>
-          <h3 class="why">Why this direction?</h3>
-          <div class="direction two-col">
-            <article>
-              <h4>Development constraints</h4>
-              <p>
-                The existing checkout was tightly coupled with membership and
-                payment logic. A full redesign would have
-                <strong
-                  >increased development time, cost and the risk of disrupting
-                  existing payment flows</strong
-                >, making it impractical within the launch timeline.
-              </p>
-            </article>
-            <article>
-              <h4>Benchmarking and design direction</h4>
-              <p>
-                Benchmarking informed a bottom-sheet approach that would let
-                customers check out
-                <strong>without leaving the product page.</strong> I prioritised
-                speed and a simpler flow over a complete restructuring of the
-                checkout experience.
-              </p>
-            </article>
-          </div>
-          <div class="comparison">
-            <h3
-              class="comparison-decision-title"
-              id="comparison-decision-title"
-            >
-              Why choose Option B?
-            </h3>
-            <article class="option">
-              <h3>Original checkout problem</h3>
-              <div class="option-copy">
-                <h4><span class="badge red">Problem</span>42s to complete</h4>
-                <p>
-                  The existing form required customers to
-                  <strong>scroll to the end to reach the Pay button.</strong>
-                  Completing checkout took 42 seconds.
-                </p>
-              </div>
-              <img
-                style="--native-width: 298px"
-                class="phone problem-phone"
-                src="/page1/assets/checkout-original.png"
-                width="298"
-                height="638"
-                alt="Original payment form requiring customers to scroll to the pay button"
-                loading="lazy"
-              />
-            </article>
-            <article class="option" aria-labelledby="comparison-decision-title">
-              <div class="option-copy">
-                <h4><span class="badge">Option A</span>Preserved structure</h4>
-                <p>
-                  Retain the existing form structure and keep the
-                  <strong>Pay button fixed at the bottom</strong>, so customers
-                  can access the payment action without scrolling to the end.
-                </p>
-                <p>
-                  <strong>Trade-off</strong><br />Lower implementation effort
-                  and risk, but usability remains largely unchanged.
-                </p>
-              </div>
-              <p class="phone-caption">Checkout: fixed payment button</p>
-              <img
-                style="--native-width: 300px"
-                class="phone"
-                src="/page1/assets/checkout-fixed.png"
-                width="300"
-                height="638"
-                alt="Option A: fixed checkout button on the existing payment form"
-                loading="lazy"
-              />
-            </article>
-            <article class="option" aria-labelledby="comparison-decision-title">
-              <div class="option-copy">
-                <h4 class="green">
-                  <span class="badge green">Option B</span>Bottom sheet, reduced
-                  information
-                </h4>
-                <p>
-                  I added a <strong>Buy Now button</strong> to the product
-                  detail page (PDP).<br />Tapping it opens a checkout bottom
-                  sheet with only the essential information, allowing customers
-                  to complete their purchase.
-                </p>
-                <p>
-                  <strong>Trade-off</strong><br />I prioritised a faster,
-                  simpler checkout experience at the cost of additional
-                  development time.
-                </p>
-              </div>
-              <div class="phone-pair">
-                <svg
-                  class="checkout-flow"
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path
-                    d="M45 90 H50 V40 H55"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    vector-effect="non-scaling-stroke"
-                  />
-                  <circle cx="45" cy="90" r="0.55" fill="currentColor" />
-                  <path
-                    d="M54 39 L55 40 L54 41"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    vector-effect="non-scaling-stroke"
-                  />
-                </svg>
-                <figure>
-                  <figcaption>
-                    PDP: <span class="green">New Buy Now button</span>
-                  </figcaption>
-                  <img
-                    style="--native-width: 300px"
-                    class="phone"
-                    src="/page1/assets/buy-now.png"
-                    width="300"
-                    height="638"
-                    alt="Product page with a new Buy Now button"
-                    loading="lazy"
-                  />
-                </figure>
-                <figure>
-                  <figcaption class="green">Buy Now → Checkout</figcaption>
-                  <img
-                    style="--native-width: 300px"
-                    class="phone"
-                    src="/page1/assets/bottom-sheet.png"
-                    width="300"
-                    height="638"
-                    alt="Checkout bottom sheet showing essential order and payment information"
-                    loading="lazy"
-                  />
-                  <ul class="caption-list">
-                    <li>Same structure as before</li>
-                    <li>Clearer layout</li>
-                    <li>Simplified order details</li>
-                  </ul>
-                </figure>
-              </div>
-            </article>
-          </div>
-        </section>
-        <section
-          class="step step-two wrap"
-          id="step-02"
-          aria-labelledby="step-two-title"
-        >
-          <header class="step-heading">
-            <p class="eyebrow">STEP 02</p>
-            <h2 id="step-two-title">
+</header>
+<h3 class="why">Why this direction?</h3>
+<div class="direction two-col figma-lines">
+<article>
+<h4>Development constraints</h4>
+<p>The existing checkout was tightly coupled with membership and payment logic. A full redesign would have <strong>increased development time, cost and the</strong> <strong>risk of disrupting existing payment flows</strong> making it impractical within the launch timeline. </p>
+</article>
+<article>
+<h4>Benchmarking and design direction</h4>
+<p>Informed a bottom-sheet approach that would let customers check out <strong>without leaving the product page.</strong> I prioritised speed and a simpler flow over a complete restructuring of the checkout experience. </p>
+</article>
+<span aria-hidden="true" class="figma-line rule-top"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span><span aria-hidden="true" class="figma-line rule-bottom"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span></div>
+<div class="comparison figma-lines"><h3 class="figma-comparison-title" id="comparison-decision-title">Why Choose Option B ?</h3>
+<article aria-labelledby="option-a-title" class="option"><span class="badge">Option A</span><h3 id="option-a-title">Preserved Structure PDP : Fixed check out btn</h3>
+<div class="option-copy">
+<p>Retain the existing form structure and keep the<br class="comparison-reference-break"/><strong>Pay button fixed at the bottom,</strong> so customers can<br class="comparison-reference-break"/>access the payment action without scrolling to the end.</p>
+<p><strong>Trade off</strong><br/>Lower implementation effort and risk, but usability<br class="comparison-reference-break"/>remains largely unchanged.</p>
+</div>
+<div aria-label="Option A: fixed checkout button on the existing payment form" class="figma-mockup figma-checkout-fixed phone" data-node-id="432:417" role="img" style="--figma-width:301.0;--figma-height:627.0"><img alt="" class="figma-retina-image" decoding="async" height="1881" loading="lazy" src="/page1/assets/figma/retina/432-417.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/52bef.png);mask-mode:alpha;mask-size:337.24% 107.39%;mask-position:94.51610183780137% 50.608930987821374%;mask-repeat:no-repeat" width="903"/><div data-name="image 6835813" data-node-id="432:418" style="position:absolute;left:9.634551495016613%;top:88.19776714513556%;width:82.72425249169434%;height:7.336523125996811%"><img alt="" class="figma-retina-detail" decoding="async" height="138" loading="lazy" src="/page1/assets/figma/retina/432-418.png" style="position:absolute;left:-0.0%;top:0.0%;width:100.0%;height:100.0%;max-width:none" width="747"/></div><div data-node-id="450:387" style="position:absolute;border-color:#08c596;border-style:dashed;left:-3.322259136212625%;top:87.40031897926634%;width:106.312292358804%;height:8.931419457735247%;border:2px dashed #08c596"></div></div>
+</article>
+<article aria-labelledby="comparison-decision-title" class="option option-b-panel"><span class="badge green">Option B</span><h3>Bottom sheet, Reduced information</h3>
+<div class="option-copy">
+<p>Added a <strong>Buy Now button</strong> to the PDP.<br class="comparison-reference-break"/>Tapping it opens a checkout bottom sheet with only<br class="comparison-reference-break"/>the essential information, allowing customers to complete their purchase.</p>
+<p><strong>Trade off</strong><br/> Prioritised a faster, simpler checkout experience at the cost of additional development time. </p>
+</div>
+<div class="phone-pair">
+<figure>
+<figcaption>PDP : Added Buy now btn</figcaption>
+<div aria-label="Product page with a new Buy Now button" class="figma-mockup figma-buy-now phone" data-node-id="432:429" role="img" style="--figma-width:299.107;--figma-height:632.0"><img alt="" class="figma-retina-image" decoding="async" loading="lazy" src="/page1/assets/figma/9f899.png" style="position:absolute;left:-0.06%;top:0.01%;width:100.12%;height:99.99%;max-width:none"/><div data-node-id="432:431" style="position:absolute;border-color:#08c596;border-style:dashed;left:53.158234344231325%;top:85.75949367088607%;width:48.143306575907616%;height:7.59493670886076%;border:2px dashed #08c596"></div></div>
+</figure>
+<figure>
+<figcaption class="green">Buy now → Check out</figcaption>
+<div aria-label="Checkout bottom sheet showing essential order and payment information" class="figma-mockup figma-bottom-sheet phone" data-node-id="432:427" role="img" style="--figma-width:310.0;--figma-height:636.0"><img alt="" class="figma-retina-image" decoding="async" loading="lazy" src="/page1/assets/figma/20544.png" style="position:absolute;inset:0;width:100%;height:100%;max-width:none"/></div>
+</figure>
+<span aria-hidden="true" class="figma-flow-curve"><img alt="" decoding="async" height="316" src="/page1/assets/figma/c79c2.svg" width="46"/></span><span aria-hidden="true" class="figma-flow-start"><img alt="" decoding="async" height="8" src="/page1/assets/figma/2063f.svg" width="8"/></span><span aria-hidden="true" class="figma-flow-end"><img alt="" decoding="async" height="8" src="/page1/assets/figma/2063f.svg" width="8"/></span></div>
+</article>
+<span aria-hidden="true" class="figma-line comparison-copy-line"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/3d770.svg" width="1366"/></span><span aria-hidden="true" class="figma-line rule-bottom"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span></div>
+</section>
+<section aria-labelledby="step-two-title" class="step step-two wrap" id="step-02">
+<header class="step-heading">
+<p class="eyebrow">STEP 02</p>
+<h2 id="step-two-title">
               Interviewed 10 customers and found we’d ordered the information
               backwards
             </h2>
-          </header>
-          <div class="step-intro">
-            <h3>Why this direction?</h3>
-            <p>
+</header>
+<div class="step-intro">
+<h3>Why this direction?</h3>
+<p>
               After we introduced the simplified payment UI, customers were
               still hesitating. So I interviewed 10 of them.
             </p>
-          </div>
-          <div class="insights">
-            <h3>User interview insights</h3>
-            <div class="insight-grid">
-              <article>
-                <p class="muted">
+</div>
+<div class="insights">
+<div class="insight-grid">
+<article><h3>User interview insights</h3>
+<p class="muted">
                   Interviews indicated that customers primarily
-                  <strong
-                    >focused on the final payment amount, applied discounts, and
-                    delivery information</strong
-                  >
+                  <strong>focused on the final payment amount, applied discounts, and
+                    delivery information</strong>
                   when confirming payment.
                 </p>
-                <p class="small">
+<p class="small">
                   We interviewed 10 users in their 20s–40s, with a range of
                   usage frequencies for the simplified payment service.
                 </p>
-              </article>
-              <article>
-                <h4>Insight 01</h4>
-                <p>
-                  <strong>3 people</strong> prioritise the final payment amount,
+</article>
+<article>
+<h4>Insight 01</h4>
+<p>
+<strong>3 people</strong> prioritise the final payment amount,
                   followed by product info and
                   <strong>discount details.</strong>
-                </p>
-                <ul
-                  class="bars"
-                  aria-label="Priorities among customers in their 20s and 30s"
-                >
-                  <li style="--bar: 100%">
-                    <span>Total payment amount</span><span>51.1</span>
-                  </li>
-                  <li style="--bar: 70%">
-                    <span>Product info</span><span>22.7</span>
-                  </li>
-                  <li style="--bar: 65%; --bar-color: #b1b1b1">
-                    <span>Discount details</span><span>20.5</span>
-                  </li>
-                  <li style="--bar: 54%; --bar-color: #a4a4a4">
-                    <span>Confirmation</span><span>5.3</span>
-                  </li>
-                </ul>
-                <div class="age">
-                  <strong>In their 20s–30s</strong><span>(5 participants)</span>
-                </div>
-                <p class="small">
+</p>
+<ul aria-label="Priorities among customers in their 20s and 30s" class="bars">
+<li style="--bar: 100%">
+<span>Total payment amount</span><span>51.1</span>
+</li>
+<li style="--bar: 70%">
+<span>Product info</span><span>22.7</span>
+</li>
+<li style="--bar: 65%; --bar-color: #b1b1b1">
+<span>Discount details</span><span>20.5</span>
+</li>
+<li style="--bar: 54%; --bar-color: #a4a4a4">
+<span>Confirmation</span><span>5.3</span>
+</li>
+</ul>
+<div class="age">
+<strong>In their 20s–30s</strong><span>(5 participants)</span>
+</div>
+<p class="small">
                   Total amount → <strong>Product info</strong> →
                   <strong>Discount details</strong> → Shipping confirmation
                 </p>
-              </article>
-              <article>
-                <h4>Insight 02</h4>
-                <p>
-                  <strong
-                    >Customers usually confirm shipping details quickly</strong
-                  >
+</article>
+<article>
+<h4>Insight 02</h4>
+<p>
+<strong>Customers usually confirm shipping details quickly</strong>
                   unless it’s a special case, such as gift delivery.
                 </p>
-                <ul
-                  class="bars"
-                  aria-label="Priorities among customers in their 40s"
-                >
-                  <li style="--bar: 100%">
-                    <span>Total payment amount</span><span>50.6</span>
-                  </li>
-                  <li style="--bar: 70%">
-                    <span>Discount details</span><span>25.4</span>
-                  </li>
-                  <li style="--bar: 65%; --bar-color: #b1b1b1">
-                    <span>Delivery date</span><span>16.0</span>
-                  </li>
-                  <li style="--bar: 54%; --bar-color: #a4a4a4">
-                    <span>Refund method</span><span>8.0</span>
-                  </li>
-                </ul>
-                <div class="age">
-                  <strong>In their 40s</strong><span>(5 participants)</span>
-                </div>
-                <p class="small">
+<ul aria-label="Priorities among customers in their 40s" class="bars">
+<li style="--bar: 100%">
+<span>Total payment amount</span><span>50.6</span>
+</li>
+<li style="--bar: 70%">
+<span>Discount details</span><span>25.4</span>
+</li>
+<li style="--bar: 65%; --bar-color: #b1b1b1">
+<span>Delivery date</span><span>16.0</span>
+</li>
+<li style="--bar: 54%; --bar-color: #a4a4a4">
+<span>Refund method</span><span>8.0</span>
+</li>
+</ul>
+<div class="age">
+<strong>In their 40s</strong><span>(5 participants)</span>
+</div>
+<p class="small">
                   Total amount → <strong>Discount details</strong> →
                   <strong>Delivery date</strong> → Refund method
                 </p>
-              </article>
-            </div>
-          </div>
-          <h3>Changes based on user interviews</h3>
-          <p class="hierarchy-copy">
-            Through customer validation interviews,<br />we
+</article>
+</div>
+</div>
+<div class="hierarchy-panel"><h3>Changes based on user interviews</h3><p class="hierarchy-copy">
+            Through customer validation interviews,<br/>we
             <strong>restructured the information hierarchy</strong> around
             customer priorities and
             <strong>eliminated UI friction points</strong> in the payment flow.
-          </p>
-          <div class="hierarchy two-col">
-            <article>
-              <div>
-                <span class="badge">Before</span>
-                <h4>Original checkout structure</h4>
-                <ul>
-                  <li>Shipping info</li>
-                  <li>Product info</li>
-                  <li>Payment method</li>
-                </ul>
-                <h4 class="clutter">Visual clutter</h4>
-                <ul>
-                  <li>Icons</li>
-                  <li>Boxed sections</li>
-                  <li>Discount tags</li>
-                  <li>Too many colours</li>
-                </ul>
-              </div>
-              <img
-                style="--native-width: 292px"
-                class="phone"
-                src="/page1/assets/hierarchy-before.png"
-                width="292"
-                height="610"
-                alt="Before: shipping information comes before product and payment information"
-                loading="lazy"
-              />
-            </article>
-            <article>
-              <div>
-                <span class="badge green">After</span>
-                <h4>Based on customer priorities</h4>
-                <ul>
-                  <li>
-                    <strong>Product info (total amount &amp; discounts)</strong>
-                  </li>
-                  <li>Shipping info</li>
-                  <li>Payment method</li>
-                </ul>
-                <h4 class="clutter">Removed elements</h4>
-                <ul>
-                  <li>Icons</li>
-                  <li>Boxed sections</li>
-                  <li>Discount tags</li>
-                  <li>Accent colours</li>
-                </ul>
-              </div>
-              <img
-                style="--native-width: 292px"
-                class="phone"
-                src="/page1/assets/hierarchy-after.png"
-                width="292"
-                height="610"
-                alt="After: total amount and discounts are prioritised above shipping and payment"
-                loading="lazy"
-              />
-            </article>
-          </div>
-        </section>
-        <section
-          class="step step-three wrap"
-          id="step-03"
-          aria-labelledby="step-three-title"
-        >
-          <header class="step-heading">
-            <p class="eyebrow">STEP 03</p>
-            <h2 id="step-three-title">
+          </p><div class="hierarchy two-col">
+<article>
+<div>
+<span class="badge">Before</span>
+<h4>Original checkout structure</h4>
+<ul>
+<li>Shipping info</li>
+<li>Product info</li>
+<li>Payment method</li>
+</ul>
+<h4 class="clutter">Visual clutter</h4>
+<ul>
+<li>Icons</li>
+<li>Boxed sections</li>
+<li>Discount tags</li>
+<li>Too many colours</li>
+</ul>
+</div>
+<div aria-label="Before: shipping information comes before product and payment information" class="figma-mockup figma-hierarchy-before phone" data-node-id="562:275" role="img" style="--figma-width:292.964;--figma-height:602.0"><img alt="" class="figma-retina-image" decoding="async" height="1806" loading="lazy" src="/page1/assets/figma/retina/562-275.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/20544.png);mask-mode:alpha;mask-size:100.0% 100.0%;mask-position:0% 0%;mask-repeat:no-repeat" width="879"/></div>
+</article>
+<article>
+<div>
+<span class="badge green">After</span>
+<h4>Based on customer priorities</h4>
+<ul>
+<li>
+<strong>Product info (total amount &amp; discounts)</strong>
+</li>
+<li>Shipping info</li>
+<li>Payment method</li>
+</ul>
+<h4 class="clutter">Removed elements</h4>
+<ul>
+<li>Icons</li>
+<li>Boxed sections</li>
+<li>Discount tags</li>
+<li>Accent colours</li>
+</ul>
+</div>
+<div aria-label="After: total amount and discounts are prioritised above shipping and payment" class="figma-mockup figma-hierarchy-after phone" data-node-id="562:280" role="img" style="--figma-width:300.0;--figma-height:616.0"><img alt="" class="figma-retina-image" decoding="async" height="1848" loading="lazy" src="/page1/assets/figma/retina/562-280.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/b42f3.png);mask-mode:alpha;mask-size:100.0% 100.0%;mask-position:0% 0%;mask-repeat:no-repeat" width="900"/></div>
+</article>
+</div></div>
+</section>
+<section aria-labelledby="step-three-title" class="step step-three wrap" id="step-03">
+<header class="step-heading">
+<p class="eyebrow">STEP 03</p>
+<h2 id="step-three-title">
               32 days of data showed customers cancelling and buying again
             </h2>
-          </header>
-          <div class="inline-heading">
-            <h3>What happened?</h3>
-            <p>
+</header>
+<div class="inline-heading">
+<h3>What happened?</h3>
+<p>
               Post-launch analysis over 32 days showed that
-              <strong
-                >17% of completed orders involved a payment cancellation</strong
-              >
+              <strong>17% of completed orders involved a payment cancellation</strong>
               followed by a return to checkout and a new purchase. Analysis
               period: March 27 – April 28 (32 days).
             </p>
-          </div>
-          <p class="analysis-label muted">
+</div>
+<p class="analysis-label muted">
             Post-purchase behaviour analysis using GA4
           </p>
-          <div class="analysis">
-            <div class="analysis-top">
-              <div class="cancel-count">
-                <p class="cancel-total">
-                  Out of<br /><b>250 completed<br />orders</b>
-                </p>
-                <div class="cancel-value">
-                  <h4 id="cancel-count-label">Cancelled payments</h4>
-                  <strong aria-labelledby="cancel-count-label">43</strong>
-                </div>
-              </div>
-              <div class="reasons">
-                <div class="reason">
-                  <span class="number">25</span>
-                  <p>To check<br /><b>discount details</b></p>
-                  <p>
+<div class="analysis">
+<div class="analysis-top">
+<div class="cancel-count">
+<p class="cancel-total">
+                  Out of<br/><b>250 completed<br/>orders</b>
+</p>
+<div class="cancel-value">
+<h4 id="cancel-count-label">Cancelled payments</h4>
+<strong aria-labelledby="cancel-count-label">43</strong>
+</div>
+</div>
+<div class="reasons">
+<div class="reason">
+<span class="number">25</span>
+<p>To check<br/><b>discount details</b></p>
+<p>
                     Users receive <strong>5 base discount benefits</strong>, and
                     as high-involvement products include more product discounts,
-                    <strong
-                      >VIP discount details become increasingly
-                      important.</strong
-                    >
-                  </p>
-                </div>
-                <div class="reason">
-                  <span class="number">18</span>
-                  <p>To use<br /><b>H.Point rewards</b></p>
-                  <p>
-                    <strong>H.Point</strong> can be used online, in-store and
-                    with affiliated partners.<br />Points can be used like
+                    <strong>VIP discount details become increasingly
+                      important.</strong>
+</p>
+</div>
+<div class="reason">
+<span class="number">18</span>
+<p>To use<br/><b>H.Point rewards</b></p>
+<p>
+<strong>H.Point</strong> can be used online, in-store and
+                    with affiliated partners.<br/>Points can be used like
                     <strong>cash (₩)</strong>, from 1 up to
                     <strong>9,999,999 points.</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="interview-quotes">
-              <div class="interview-label">
-                <h4>User interviews</h4>
-                <span class="small">(In their 20s–40s)</span>
-              </div>
-              <div class="interview-summary">
-                <svg
-                  class="interview-icon"
-                  viewBox="0 0 48 48"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <circle cx="24" cy="24" r="24" fill="#d5d5d5" />
-                  <circle cx="24" cy="17" r="6" fill="#454647" />
-                  <path
-                    d="M12 35v-3c0-6 5-9 12-9s12 3 12 9v3Z"
-                    fill="#454647"
-                  />
-                </svg>
-                <p>
+</p>
+</div>
+</div>
+</div>
+<div class="interview-quotes">
+<div class="interview-label">
+<h4>User interviews</h4>
+<span class="small">(In their 20s–40s)</span>
+</div>
+<div class="interview-summary">
+<svg aria-hidden="true" class="interview-icon" focusable="false" viewbox="0 0 48 48">
+<circle cx="24" cy="24" fill="#d5d5d5" r="24"></circle>
+<circle cx="24" cy="17" fill="#454647" r="6"></circle>
+<path d="M12 35v-3c0-6 5-9 12-9s12 3 12 9v3Z" fill="#454647"></path>
+</svg>
+<p>
                   Core users, particularly middle-aged women, showed a strong
                   tendency to carefully recheck discounts and rewards at the
                   final step.
                 </p>
-              </div>
-              <div class="interview-summary">
-                <svg
-                  class="interview-icon"
-                  viewBox="0 0 48 48"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <circle cx="24" cy="24" r="24" fill="#d5d5d5" />
-                  <circle cx="24" cy="17" r="6" fill="#454647" />
-                  <path
-                    d="M12 35v-3c0-6 5-9 12-9s12 3 12 9v3Z"
-                    fill="#454647"
-                  />
-                </svg>
-                <p>
+</div>
+<div class="interview-summary">
+<svg aria-hidden="true" class="interview-icon" focusable="false" viewbox="0 0 48 48">
+<circle cx="24" cy="24" fill="#d5d5d5" r="24"></circle>
+<circle cx="24" cy="17" fill="#454647" r="6"></circle>
+<path d="M12 35v-3c0-6 5-9 12-9s12 3 12 9v3Z" fill="#454647"></path>
+</svg>
+<p>
                   Interviews confirmed that missing or unclear benefit
                   information increased hesitation right before payment, even
                   when purchase intent was high.
                 </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="turning-point" aria-labelledby="turning-title">
-          <div class="wrap two-col">
-            <h2 class="section-title" id="turning-title">
-              We made checkout fast.<br />We forgot people<br />came to check.
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="turning-title" class="turning-point">
+<div class="wrap two-col">
+<h2 class="section-title" id="turning-title">
+              We made checkout fast.<br/>We forgot people<br/>came to check.
             </h2>
-            <div>
-              <p>
+<div>
+<p>
                 A month after launch, GA4 showed that 43 of 250 completed
-                <strong
-                  >orders were cancelled and placed again.</strong
-                >
-              </p>
-              <p>
-                <strong
-                  >We’d optimised for speed and removed the two things<br />our
-                  core buyers most wanted to verify:</strong
-                >
-              </p>
-              <p class="conclusion">
+                <strong>orders were cancelled and placed again.</strong>
+</p>
+<p>
+<strong>We’d optimised for speed and removed the two things<br/>our
+                  core buyers most wanted to verify:</strong>
+</p>
+<p class="conclusion">
                 Their <span class="green">discounts</span> and their
-                <span class="green">points.</span><br />Speed was never the
+                <span class="green">points.</span><br/>Speed was never the
                 whole problem. Trust was.
               </p>
-            </div>
-          </div>
-        </section>
-        <section class="transparency wrap" aria-labelledby="transparency-title">
-          <div class="transparency-intro">
-            <h3 id="transparency-title">
+</div>
+</div>
+</section>
+<section aria-labelledby="transparency-title" class="transparency wrap">
+<div class="transparency-intro">
+<h3 id="transparency-title">
               Trading compactness for transparency
             </h3>
-            <p>
+<p>
               After testing three approaches, we chose the dropdown to keep
               discount details visible within the checkout flow, trading a more
               compact layout for greater transparency.
             </p>
-          </div>
-          <div class="prototypes three-col">
-            <article class="prototype">
-              <h3><span class="badge">Tooltip</span></h3>
-              <div class="prototype-copy">
-                <h4>Quick glance, minimal interruption</h4>
-                <p>
+</div>
+<div class="prototypes three-col figma-lines">
+<article class="prototype">
+<h3><span class="badge">Tooltip</span></h3>
+<div class="prototype-copy">
+<h4>Quick glance, minimal interruption</h4>
+<p>
                   Discount details appear in a compact tooltip within the
                   checkout screen.
                 </p>
-                <ul class="pros-cons">
-                  <li>Easy to view in one place.</li>
-                  <li class="con">
+<ul class="pros-cons">
+<li>Easy to view in one place.</li>
+<li class="con">
                     Cannot display all available benefits because it does not
                     support scrolling.
                   </li>
-                </ul>
-              </div>
-              <img
-                style="--native-width: 332px"
-                src="/page1/assets/tooltip.png"
-                width="332"
-                height="720"
-                alt="Tooltip prototype showing a small discount breakdown over checkout"
-                loading="lazy"
-              />
-            </article>
-            <article class="prototype">
-              <h3><span class="badge">Full popup</span></h3>
-              <div class="prototype-copy">
-                <h4>Complete visibility, clear messaging</h4>
-                <p>
+</ul>
+</div>
+<div aria-label="Tooltip prototype showing a small discount breakdown over checkout" class="figma-mockup figma-tooltip" data-node-id="432:532" role="img" style="--figma-width:230.0;--figma-height:499.0"><img alt="" class="figma-retina-image" decoding="async" height="1497" loading="lazy" src="/page1/assets/figma/retina/432-532.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/c0a4d.png);mask-mode:alpha;mask-size:100.0% 100.0%;mask-position:0% 0%;mask-repeat:no-repeat" width="690"/></div>
+</article>
+<article class="prototype">
+<h3><span class="badge">Full popup</span></h3>
+<div class="prototype-copy">
+<h4>Complete visibility, clear messaging</h4>
+<p>
                   A full-screen popup provides a complete view of all discount
                   details.
                 </p>
-                <ul class="pros-cons">
-                  <li>
+<ul class="pros-cons">
+<li>
                     Displays all benefits with a clear information hierarchy.
                   </li>
-                  <li class="con">
+<li class="con">
                     Requires an extra action to close the popup and return to
                     checkout.
                   </li>
-                </ul>
-              </div>
-              <img
-                style="--native-width: 332px"
-                src="/page1/assets/popup.png"
-                width="332"
-                height="720"
-                alt="Full-screen popup prototype with complete discount details and a close action"
-                loading="lazy"
-              />
-            </article>
-            <article class="prototype">
-              <h3><span class="badge green">Dropdown</span></h3>
-              <div class="prototype-copy">
-                <h4>Detailed information, seamless flow</h4>
-                <p>
+</ul>
+</div>
+<div aria-label="Full-screen popup prototype with complete discount details and a close action" class="figma-mockup figma-popup" data-node-id="432:528" role="img" style="--figma-width:230.0;--figma-height:499.0"><img alt="" class="figma-retina-image" decoding="async" height="1497" loading="lazy" src="/page1/assets/figma/retina/432-528.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/11d54.png);mask-mode:alpha;mask-size:100.0% 100.0%;mask-position:0% 0%;mask-repeat:no-repeat" width="690"/></div>
+</article>
+<article class="prototype">
+<h3><span class="badge green">Dropdown</span></h3>
+<div class="prototype-copy">
+<h4>Detailed information, seamless flow</h4>
+<p>
                   Discount details expand inline within the checkout screen.
                 </p>
-                <ul class="pros-cons">
-                  <li>
+<ul class="pros-cons">
+<li>
                     Keeps all key information visible within a single checkout
                     screen.
                   </li>
-                  <li class="con">
+<li class="dropdown-check">
                     Requires no additional navigation, maintaining a smooth
                     payment flow.
                   </li>
-                </ul>
-              </div>
-              <img
-                style="--native-width: 233px"
-                src="/page1/assets/dropdown.png"
-                width="233"
-                height="502"
-                alt="Selected dropdown solution: expanded discount details remain within checkout"
-                loading="lazy"
-              />
-            </article>
-          </div>
-          <div class="final-design">
-            <p class="final-design-label">
-              <span class="badge green">Final Design</span>
-            </p>
-            <div class="shipped two-col">
-              <article>
-                <h3>01. Discount benefit details</h3>
-                <p class="muted">
-                  All available discount benefits are visible on a
-                  <strong>single screen without scrolling.</strong>
-                </p>
-                <img
-                  style="--native-width: 312px"
-                  src="/page1/assets/discount-detail.png"
-                  width="312"
-                  height="669"
-                  alt="Shipped checkout highlighting the expanded discount benefits"
-                  loading="lazy"
-                />
-              </article>
-              <article>
-                <h3>02. Using H.Point rewards</h3>
-                <p class="muted">
-                  An <strong>input field</strong> and
-                  <strong>Use all button</strong> allow customers to apply
-                  points instantly.
-                </p>
-                <img
-                  style="--native-width: 317px"
-                  src="/page1/assets/points-detail.png"
-                  width="317"
-                  height="669"
-                  alt="Shipped checkout highlighting the H.Point input and Use all button"
-                  loading="lazy"
-                />
-              </article>
-            </div>
-          </div>
-        </section>
-        <section class="results" aria-labelledby="results-title">
-          <div class="wrap results-content">
-            <p class="eyebrow">RESULT</p>
-            <div class="result-grid">
-              <div class="result-chart">
-                <div class="result-summary">
-                  <div>
-                    <h3>Completed purchases</h3>
-                    <p class="result-growth">+74.7%</p>
-                  </div>
-                  <div class="result-speed">
-                    <h3>Faster checkout completion</h3>
-                    <span><strong>85.7%</strong> Faster</span>
-                  </div>
-                </div>
-                <figure>
-                  <img
-                    src="/page1/assets/result-chart.svg"
-                    width="290"
-                    height="330"
-                    alt="Completed purchases increased from 15,326 to 26,778. GA4 funnel analysis, May 29 to June 29."
-                    loading="lazy"
-                  />
-                  <figcaption class="result-period">
+</ul>
+</div>
+<div aria-label="Selected dropdown solution: expanded discount details remain within checkout" class="figma-mockup figma-dropdown" data-node-id="432:527" role="img" style="--figma-width:230.0;--figma-height:498.0"><img alt="" class="figma-retina-image" decoding="async" height="1518" loading="lazy" src="/page1/assets/figma/retina/432-527.png" style="position:absolute;left:-1.7391304348%;top:0;width:103.47826087%;height:101.6064257%;max-width:none" width="714"/></div>
+</article>
+<span aria-hidden="true" class="figma-line rule-top"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span><span aria-hidden="true" class="figma-line rule-bottom"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span><span aria-hidden="true" class="figma-line prototype-copy-line"><img alt="" decoding="async" height="0.5" src="/page1/assets/figma/1e1ec.svg" width="1366"/></span></div>
+<div class="final-design"><header class="final-reference-heading"><p class="eyebrow">FINAL DESIGN</p><h2>Streamlined Discounts and Flexible H.Point Payments</h2><p class="final-design-intro">After multiple iterations, I introduced a dropdown for viewing all discounts on one screen<br/>and added H.Point redemption, allowing users to apply their preferred amount directly at checkout.</p></header>
+<div class="shipped two-col">
+<article><div class="final-feature-copy"><h3 class="badge green">Discount Benefits Details</h3><p class="muted">Maximum discount benefits visible on<br/>a <strong>single screen without scrolling.</strong></p></div>
+<div aria-label="Shipped checkout highlighting the expanded discount benefits" class="figma-mockup figma-discount-detail" data-node-id="432:535" role="img" style="--figma-width:324.0;--figma-height:634.0"><img alt="" class="figma-retina-image" decoding="async" height="1902" loading="lazy" src="/page1/assets/figma/retina/432-535.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/d86f7.png);mask-mode:alpha;mask-size:123.26% 112.01%;mask-position:47.635425623387775% 50.041631973355514%;mask-repeat:no-repeat" width="972"/><div data-name="image 6835816" data-node-id="432:536" style="position:absolute;left:-3.7037037037037033%;top:32.965299684542586%;width:107.09876543209877%;height:28.075709779179807%;box-shadow:0px 4px 4px 0px rgba(0,0,0,0.25);border:1px dashed #08c596"><div style="position:absolute;inset:0;overflow:hidden;border-radius:2px"><img alt="" class="figma-retina-detail" decoding="async" height="558" loading="lazy" src="/page1/assets/figma/retina/432-536.png" style="position:absolute;left:-1.1527377521613833%;top:0.0%;width:102.30547550432276%;height:104.49438202247192%;max-width:none" width="1065"/></div></div></div>
+</article>
+<article><div class="final-feature-copy"><h3 class="badge green">Using H.point Rewards</h3><p class="muted"><strong>Input field</strong> and <strong>use full amount button</strong><br/>for instant point application</p></div>
+<div aria-label="Shipped checkout highlighting the H.Point input and Use all button" class="figma-mockup figma-points-detail" data-node-id="432:533" role="img" style="--figma-width:309.0;--figma-height:646.0"><img alt="" class="figma-retina-image" decoding="async" height="1938" loading="lazy" src="/page1/assets/figma/retina/432-533.png" style="position:absolute;left:0;top:0;width:100%;height:100%;max-width:none;mask-image:url(/page1/assets/figma/d9bbd.png);mask-mode:alpha;mask-size:129.95% 110.47%;mask-position:53.28881469115194% 47.37344794651385%;mask-repeat:no-repeat" width="927"/><div data-name="tobe 8" data-node-id="432:534" style="position:absolute;left:-4.53074433656958%;top:58.82352941176471%;width:108.7378640776699%;height:6.191950464396285%;box-shadow:0px 2px 14px 0px rgba(0,0,0,0.25);border:1px dashed #08c596"><div style="position:absolute;inset:0;overflow:hidden;border-radius:2px"><img alt="" class="figma-retina-detail" decoding="async" height="210" loading="lazy" src="/page1/assets/figma/retina/432-534.png" style="position:absolute;left:-4.464285714285714%;top:-32.5%;width:108.92857142857142%;height:175.0%;max-width:none" width="1098"/></div></div></div>
+</article>
+</div>
+</div>
+</section>
+<section aria-labelledby="results-title" class="results">
+<div class="wrap results-content">
+<p class="eyebrow">RESULT</p>
+<div class="result-grid">
+<div class="result-chart">
+<div class="result-summary">
+<div>
+<h3>Completed purchases</h3>
+<p class="result-growth">+74.7%</p>
+</div>
+<div class="result-speed">
+<h3>Faster checkout completion</h3>
+<span><strong>85.7%</strong> Faster</span>
+</div>
+</div>
+<figure>
+<img alt="Completed purchases increased from 15,326 to 26,778. GA4 funnel analysis, May 29 to June 29." height="330" loading="lazy" src="/page1/assets/result-chart.svg" width="290"/>
+<figcaption class="result-period">
                     GA4 funnel analysis: May 29 – Jun 29
                   </figcaption>
-                </figure>
-              </div>
-              <div class="result-details">
-                <h2 id="results-title">Quantitative details</h2>
-                <div class="quantities">
-                  <div class="quantity-item">
-                    <h4>Completed purchases</h4>
-                    <p class="quantity-value">
-                      <span class="quantity-before">15,326</span>
-                      <span class="quantity-arrow" aria-label="increased to"
-                        >→</span
-                      >
-                      <strong class="quantity-after">26,778</strong>
-                    </p>
-                    <p class="quantity-change">
-                      <strong>+11,452</strong><span>purchases</span>
-                    </p>
-                  </div>
-                  <div class="quantity-item">
-                    <h4>Checkout completion time</h4>
-                    <p class="quantity-value">
-                      <span class="quantity-before">42s</span>
-                      <span class="quantity-arrow" aria-label="decreased to"
-                        >→</span
-                      >
-                      <strong class="quantity-after">6s</strong>
-                    </p>
-                    <p class="quantity-change">
-                      <strong>−36 sec</strong><span>completion time</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="result-insights">
-                  <header>
-                    <h3>User interview insights</h3>
-                    <span class="small"
-                      >10 in-depth interviews · Ages 20–40 · General to VVIP
-                      members</span
-                    >
-                  </header>
-                  <div class="result-insight-row">
-                    <h4>Flexible point value</h4>
-                    <p>
+</figure>
+</div>
+<div class="result-details">
+<h2 id="results-title">Quantitative details</h2>
+<div class="quantities">
+<div class="quantity-item">
+<h4>Completed purchases</h4>
+<p class="quantity-value">
+<span class="quantity-before">15,326</span>
+<span aria-label="increased to" class="quantity-arrow">→</span>
+<strong class="quantity-after">26,778</strong>
+</p>
+<p class="quantity-change">
+<strong>+11,452</strong><span>purchases</span>
+</p>
+</div>
+<div class="quantity-item">
+<h4>Checkout completion time</h4>
+<p class="quantity-value">
+<span class="quantity-before">42s</span>
+<span aria-label="decreased to" class="quantity-arrow">→</span>
+<strong class="quantity-after">6s</strong>
+</p>
+<p class="quantity-change">
+<strong>−36 sec</strong><span>completion time</span>
+</p>
+</div>
+</div>
+<div class="result-insights">
+<header>
+<h3>User interview insights</h3>
+<span class="small">10 in-depth interviews · Ages 20–40 · General to VVIP
+                      members</span>
+</header>
+<div class="result-insight-row">
+<h4>Flexible point value</h4>
+<p>
                       Converting leftover gift card balances into H.Point
                       increased perceived value by allowing customers to use
                       points both online and in-store.
                     </p>
-                  </div>
-                  <div class="result-insight-row">
-                    <h4>Seamless H.Point usage</h4>
-                    <p>
+</div>
+<div class="result-insight-row">
+<h4>Seamless H.Point usage</h4>
+<p>
                       Users valued being able to apply H.Point directly without
                       moving to a separate order screen.
                     </p>
-                  </div>
-                  <div class="result-insight-row">
-                    <h4>Clear discount visibility</h4>
-                    <p>
+</div>
+<div class="result-insight-row">
+<h4>Clear discount visibility</h4>
+<p>
                       Seeing discount benefits upfront reduced hesitation and
                       helped users complete purchases more confidently.
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="reflections wrap" aria-labelledby="reflections-title">
-          <p class="eyebrow">REFLECTIONS</p>
-          <div class="reflection-heading">
-            <h2 class="section-title" id="reflections-title">
-              Overlooked<br />key customer needs
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="reflections-title" class="reflections wrap">
+<p class="eyebrow">REFLECTIONS</p>
+<div class="reflection-heading">
+<h2 class="section-title" id="reflections-title">
+              Overlooked<br/>key customer needs
             </h2>
-            <p class="lead">
-              Overlooking discount details and H.Point usage during the initial
-              order form analysis highlighted the need for more thorough
-              research validation and sufficient testing before launch.
-            </p>
-          </div>
-          <ol class="reflection-list">
-            <li>
-              <h4>
-                Insufficient analysis of what customers checked in the original
-                order form.
-              </h4>
-              <p>
-                By focusing on scrolling and a fixed payment button in the
-                existing order form, I overlooked a more detailed analysis of
-                the information customers check before paying (Step 01).
-              </p>
-            </li>
-            <li>
-              <h4>
-                Insufficient analysis of customers by membership level on The
-                Hyundai platform.
-              </h4>
-              <p>
-                I had not fully explored why customers at different membership
-                levels behave differently.
-              </p>
-            </li>
-            <li>
-              <h4>Why was this overlooked in customer interviews?</h4>
-              <p>
-                The oversight occurred because the interview questions were
-                primarily focused on addressing the initial design issues,
-                without exploring the existing order form’s functionality.
-              </p>
-            </li>
-          </ol>
-        </section>
-      </main>
-      <div class="wrap project-navigation">
-        <nav class="project-nav" aria-label="More projects">
-          <a href="/page4/"
-            ><strong>← Previous</strong
-            ><span>AI-Assisted MVP Development</span></a
-          ><a href="/page3/"
-            ><strong>Next →</strong><span>Design System · Hyundai.com</span></a
-          >
-        </nav>
-      </div>
-    </div>
-  </body>
+<p class="lead"><span class="reflection-reference-line">Discount details and H.Point usage during initial order form</span><span class="reflection-reference-line">analysis highlighted the need for more thorough research</span><span class="reflection-reference-line">validation and sufficient testing before launch.</span></p>
+</div>
+<ol class="reflection-list">
+<li>
+<h4><span class="reflection-reference-line">Missing analysis of customer-preferred</span><span class="reflection-reference-line">areas based on the initial order form.</span></h4>
+<p><span class="reflection-reference-line">In focusing on scroll and button fixation in the existing order form,</span><span class="reflection-reference-line">I overlooked a more detailed analysis of the Payment Zone Information Check (Step 01)</span></p>
+</li>
+<li>
+<h4><span class="reflection-reference-line">Overlooked the detailed analysis of customers by</span><span class="reflection-reference-line">membership type on the Hyundai.com platform.</span></h4>
+<p><span class="reflection-reference-line">There was a lack of analysis on why customers</span><span class="reflection-reference-line">at different membership levels.</span></p>
+</li>
+<li>
+<h4><span class="reflection-reference-line">Why was this overlooked</span><span class="reflection-reference-line">in customer interviews?</span></h4>
+<p><span class="reflection-reference-line">The oversight occurred because the interview questions were primarily focused on</span><span class="reflection-reference-line">addressing the initial design issues, without delving into the existing order form’s functionality.</span></p>
+</li>
+</ol>
+</section>
+</main>
+<div class="wrap project-navigation">
+<nav aria-label="More projects" class="project-nav">
+<a href="/page2/"><strong>← Previous</strong><span>Localization · LG.com</span></a><a href="/page3/"><strong>Next →</strong><span>Design System · Hyundai.com</span></a>
+</nav>
+</div>
+</div>
+</body>
 </html>

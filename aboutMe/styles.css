@@ -310,3 +310,5 @@ a:focus-visible {
     transform: none;
   }
 }
+/* 3x Figma photo exports replace the low-resolution full-page crops. */
+.about-photo-retina img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover}

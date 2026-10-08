@@ -1,0 +1,329 @@
+/* Color regions from Figma work1 / 432:261. Result retains its own palette. */
+.impact,.journey,.approach,.step,.transparency,.reflections{
+ color:#fff;--accent:#08c596;--muted:#999;--subtle:#999;
+}
+.journey{background:#1e1f21;color:#fff}
+.journey .lead{color:#fff}
+.journey-grid figure:nth-of-type(-n+2) figcaption{color:#6d6d6d}
+.journey-issues h4{color:#00a676}
+.comparison .badge{background:rgba(255,255,255,.3);color:#fff}
+.comparison .badge.red{background:rgba(255,55,55,.3)}
+.comparison>article.option-b-panel{position:relative;isolation:isolate;color:#333;--muted:#333}
+.option-b-panel::before{content:"";position:absolute;top:-40px;bottom:-32px;left:-12px;right:calc(-1*var(--page-side-gutter,40px));background:#f6f6f9;z-index:-1}
+.comparison .option-b-panel .comparison-decision-title{grid-column:auto;grid-row:1;color:#333}
+.comparison .option-b-panel .green{color:#08c596}
+.comparison .option-b-panel .badge.green{background:#08c596;color:#fff}
+.comparison .option-b-panel .phone-pair figcaption,.comparison .option-b-panel .caption-list{color:#333}
+.hierarchy-panel{position:relative;isolation:isolate;margin-top:48px;padding:64px 0;--muted:#333;--subtle:#999;--line:#c8c8c8;color:#333}
+.hierarchy-panel::before{content:"";position:absolute;inset:0 auto 0 50%;width:100vw;transform:translateX(-50%);background:#f6f6f9;z-index:-1}
+.hierarchy-panel>h3{margin-top:0;color:#111}
+.hierarchy-panel .hierarchy-copy,.hierarchy-panel .hierarchy ul{color:#333}
+.hierarchy-panel .badge{background:#666;color:#fff}
+.hierarchy-panel .badge.green{background:#08c596;color:#fff}
+.hierarchy-panel .hierarchy article+article{border-color:#c8c8c8}
+.turning-point{background:#f6f6f9;color:#000}
+.turning-point .green{color:#000}
+.prototypes .badge{background:rgba(255,255,255,.3);color:#fff}
+.prototypes .badge.green{background:rgba(8,197,150,.3);color:#fff}
+.prototype .pros-cons .dropdown-check::before{content:"✓";background:#8ee5d0;color:#1e2020}
+.final-design{color:#333;--muted:#333;--subtle:#999;--accent:#08c596}
+.final-design .badge.green{background:#08c596;color:#fff}
+.final-design .shipped h3,.final-design .muted{color:#333}
+.final-design{padding-top:48px;padding-bottom:80px}
+.final-design-label .badge.green{background:transparent;color:#111;border-radius:0;font-size:32px;line-height:1.2;padding:0 0 12px;border-bottom:4px solid #08c596;letter-spacing:-.5px}
+.final-design .shipped{max-width:1100px;column-gap:80px;padding-top:48px}
+.final-design .shipped h3{font-size:22px;line-height:1.3;font-weight:600}
+.final-design .shipped p{font-size:17px;line-height:1.55;margin-top:12px;color:#4b4b4b;max-width:480px}
+.final-design .shipped p strong{color:#111;font-weight:600}
+.final-design .shipped .figma-mockup{width:calc(var(--figma-width)*1.05px);max-width:calc(100% - 32px);margin:32px auto 0}
+.final-design .shipped article:first-child .figma-mockup{margin-top:32px}
+@media(max-width:760px){
+ .final-design{padding-top:36px;padding-bottom:48px}
+ .final-design-label .badge.green{font-size:28px}
+ .final-design .shipped{padding-top:36px;row-gap:48px}
+ .final-design .shipped h3{font-size:21px}
+ .final-design .shipped p{font-size:16px}
+ .final-design .shipped .figma-mockup{width:calc(var(--figma-width)*.95px);margin-top:24px}
+ .final-design .shipped article:first-child .figma-mockup{margin-top:24px}
+}
+.results{background:#f6f6f9;margin-top:0;--accent:#08c596}
+.results .quantity-change{background:rgba(8,197,150,.12)}
+.results .quantity-change strong{color:var(--accent)}
+.impact .metrics{padding-block:0;border-block:1px solid #373839}
+.impact .metrics>.figma-line{display:none}
+.impact .metric{padding-block:24px 32px;border-color:#373839}
+.impact .metric:first-of-type{padding-left:0}
+.impact .metric:last-of-type{border-right:0;padding-right:0}
+.impact .months>div+div{border-left:1px solid #373839;padding-left:16px}
+.transparency{padding-bottom:0}
+#step-02 .step-intro{border-bottom-color:#373839}
+#step-02 .insights{padding-block:0}
+#step-02 .insight-grid{padding-bottom:0;border-bottom:0}
+#step-02 .insight-grid>article{padding-block:38px 48px;border-left-color:#373839}
+#step-02 .insight-grid>article:first-child{border-left:0}
+#step-02 .hierarchy-panel{margin-top:0}
+@media(max-width:1023px){
+ #step-02 .insight-grid>article{padding-block:24px;border-left:0}
+ #step-02 .insight-grid>article+article{border-top:1px solid #373839}
+}
+/* Step 01: make the decision and supporting copy easier to scan. */
+#step-01 .step-heading h2{font-size:30px;line-height:1.3;max-width:1000px}
+#step-01 .why{font-size:20px;margin-bottom:20px}
+#step-01 .direction h4{font-size:16px;margin-bottom:12px}
+#step-01 .direction p{font-size:16px;line-height:1.6;color:#b8b8b8}
+#step-01 .comparison{column-gap:32px;padding-top:48px}
+#step-01 .comparison>article.option:first-of-type::after{right:-16px}
+#step-01 .comparison h3{font-size:22px;line-height:1.3}
+#step-01 .comparison .option h4{font-size:16px;line-height:1.5;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+#step-01 .comparison .option p{font-size:16px;line-height:1.6;color:#b8b8b8}
+#step-01 .comparison .option .badge{font-size:14px;padding:6px 14px;margin-right:0;flex-shrink:0}
+#step-01 .comparison .option-b-panel::before{left:-16px;top:0;bottom:-32px}
+#step-01 .comparison .option-b-panel{padding-top:28px}
+#step-01 .option-b-panel .comparison-decision-title{font-size:26px;line-height:1.3;position:relative;padding-left:16px;border-left:4px solid #08c596;margin-bottom:24px}
+#step-01 .comparison .option-b-panel .option-copy p{color:#333}
+#step-01 .comparison .option-b-panel .green{color:#007d62}
+#step-01 .comparison .option-b-panel .badge.green{background:#007d62;color:#fff}
+#step-01 .comparison .option-b-panel .option-copy p+p{padding-top:16px;border-top:1px solid #d3d3d8;margin-top:16px}
+#step-01 .option-copy strong{font-weight:600;color:#fff}
+#step-01 .option-b-panel .option-copy strong{color:#111}
+#step-01 .comparison .phone-caption,#step-01 .comparison .phone-pair figcaption{font-size:16px;line-height:1.4;font-weight:500}
+#step-01 .comparison .option-b-panel .phone-pair figcaption{color:#222}
+@media(max-width:760px){
+ #step-01 .step-heading h2{font-size:25px}
+ #step-01 .comparison{padding-top:32px}
+ #step-01 .comparison .option-b-panel{padding-top:28px;padding-bottom:24px}
+ #step-01 .comparison .option-b-panel::before{left:-20px;right:-20px;top:0;bottom:0}
+ #step-01 .option-b-panel .comparison-decision-title{font-size:24px}
+ #step-01 .comparison .phone-pair figcaption{font-size:14px}
+}
+@media(max-width:760px){
+ .option-b-panel{padding-block:24px}
+ .option-b-panel::before{top:0;bottom:0;left:-20px;right:-20px}
+ .hierarchy-panel{margin-top:32px;padding-block:48px}
+}
+/* Step 01 comparison layout from the supplied reference. */
+#step-01 .why{margin-bottom:8px}
+#step-01 .direction{padding-block:20px 28px}
+#step-01 .direction>article+article{border-color:#373839}
+#step-01 .comparison{padding-top:20px;grid-template-rows:auto auto auto 80px auto auto;column-gap:32px}
+#step-01 .comparison>.option{grid-row:1/span 6}
+#step-01 .comparison>.option>.badge{grid-row:1;justify-self:start;margin:0 0 12px}
+#step-01 .comparison>.option>h3{grid-row:2;margin:0 0 18px;font-size:22px}
+#step-01 .comparison .option-copy{grid-row:3;display:block}
+#step-01 .comparison .option-copy h4{margin:0 0 12px;color:#08c596}
+#step-01 .comparison .option-copy p+p{margin-top:20px}
+#step-01 .comparison>.option>.phone{grid-row:5}
+#step-01 .comparison .phone-pair{grid-row:4/span 3}
+#step-01 .comparison .phone-pair figcaption{padding-bottom:24px}
+#step-01 .comparison .option-b-panel{padding-top:0}
+#step-01 .comparison .option-b-panel::before{top:-20px;left:-16px;bottom:-32px}
+#step-01 .option-b-panel .comparison-decision-title{padding-left:0;border-left:0}
+#step-01 .comparison .option-b-panel>.badge.green{background:#08c596;color:#fff}
+#step-01 .comparison .option-b-panel .option-copy h4{color:#333}
+#step-01 .comparison .option-b-panel .option-copy p+p{border:0;padding-top:0}
+#step-01 .comparison-copy-line{right:calc(50% - 16px);top:calc(var(--comparison-phone-top) - 80px);background:#373839}
+#step-01 .comparison-copy-line img,#step-01 .comparison>.rule-bottom{display:none}
+#step-01 .comparison>article.option:first-of-type::after{border-color:#373839}
+@media(max-width:760px){
+ #step-01 .comparison{display:grid;grid-template-rows:none;padding-top:24px}
+ #step-01 .comparison>.option{display:flex;flex-direction:column;grid-row:auto;gap:0}
+ #step-01 .comparison>.option>.badge{align-self:flex-start}
+ #step-01 .comparison .option-copy{margin-bottom:32px}
+ #step-01 .comparison>.option>.phone{align-self:center}
+ #step-01 .comparison .phone-pair{display:grid;grid-template-rows:auto auto;row-gap:0}
+ #step-01 .comparison .phone-pair>figure{grid-row:1/span 2}
+ #step-01 .comparison .option-b-panel{padding-block:24px}
+ #step-01 .comparison .option-b-panel::before{top:0;bottom:0;left:-20px;right:-20px}
+ #step-01 .comparison-copy-line{display:none}
+}
+#step-01 .step-heading h2{font-size:26px;max-width:none}
+@media(max-width:760px){#step-01 .step-heading h2{font-size:25px}}
+#step-01 .comparison-copy-line{right:50%}
+/* Shared edges and explicit reference line breaks for Step 01. */
+#step-01 .direction{column-gap:0;padding-block:20px 28px;border-block:1px solid #373839}
+#step-01 .direction>.figma-line{display:none}
+#step-01 .direction>article:first-child{padding-right:32px}
+#step-01 .direction>article+article{padding-left:36px}
+#step-01 .comparison>article.option:first-of-type::after{top:-20px;bottom:0}
+#step-01 .comparison-copy-line{height:1px;background:#373839}
+#step-01 .reference-line{display:block}
+#step-01 .option-copy .reference-line:first-child:has(strong:only-child){margin-bottom:4px}
+@media(min-width:761px){
+ #step-01 .reference-line{white-space:nowrap}
+ #step-01 .direction p{font-size:clamp(10px,1.08vw,16px);line-height:1.45}
+ #step-01 .comparison .option p{font-size:clamp(9px,.95vw,14px);line-height:1.45}
+}
+@media(max-width:760px){
+ #step-01 .reference-line{display:inline;white-space:normal}
+ #step-01 .reference-line+.reference-line::before{content:' '}
+ #step-01 .option-copy p .reference-line:first-child:has(strong:only-child){display:block}
+ #step-01 .direction>article:first-child{padding-right:0}
+ #step-01 .direction>article+article{padding-left:0}
+}
+@media(min-width:761px){
+ #step-01 .comparison{grid-template-columns:.85fr 1.15fr 1fr 1fr}
+ #step-01 .comparison .option p{font-size:clamp(9px,.88vw,13px)}
+}
+@media(min-width:761px){
+ #step-01 .direction>article+article{position:relative;border-left:0}
+ #step-01 .direction>article+article::before{content:'';position:absolute;left:0;top:-20px;bottom:-28px;border-left:1px solid #373839}
+}
+/* Reduce the original checkout mockup while preserving its top alignment. */
+#step-01 .comparison .figma-checkout-original{width:calc(var(--figma-width)*var(--figma-mockup-scale)*.8px)}
+@media(max-width:760px){
+ #step-01 .comparison .figma-checkout-original{width:calc(var(--figma-width)*.68px)}
+}
+/* Compare only A/B, using the same readable typography on a white surface. */
+#step-01 .comparison{isolation:isolate;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto 64px auto auto;color:#333;--muted:#555;--line:#ddd;padding-block:32px;column-gap:48px}
+#step-01 .comparison::before{content:'';position:absolute;inset:0 auto 0 50%;width:100vw;transform:translateX(-50%);background:#fff;z-index:-1}
+#step-01 .comparison>.option:first-of-type{grid-column:1}
+#step-01 .comparison>.option:last-of-type{grid-column:2/span 2}
+#step-01 .comparison>.option:first-of-type::after{top:-32px;bottom:-32px;right:-24px;border-color:#ddd}
+#step-01 .comparison .option-b-panel::before{display:none}
+#step-01 .comparison .option h3{color:#222;font-size:22px}
+#step-01 .comparison .option h4{font-size:16px;line-height:1.5;color:#333}
+#step-01 .comparison .option p{font-size:16px;line-height:1.6;color:#555;white-space:normal}
+#step-01 .comparison .option-copy strong{color:#222}
+#step-01 .comparison>.option>.badge{background:#666;color:#fff}
+#step-01 .comparison>.option-b-panel>.badge.green{background:#08c596}
+#step-01 .comparison-copy-line{display:none}
+#step-01 .direction p{font-size:16px;line-height:1.6}
+@media(max-width:760px){
+ #step-01 .comparison{grid-template-columns:minmax(0,1fr);grid-template-rows:none;padding-block:24px;row-gap:40px}
+ #step-01 .comparison>.option:first-of-type,#step-01 .comparison>.option:last-of-type{grid-column:1}
+ #step-01 .comparison>.option-b-panel{padding-top:32px;border-top:1px solid #ddd}
+}
+#step-01 .comparison>.option:first-of-type::after{display:none}
+#step-01 .comparison::after{content:'';position:absolute;top:0;bottom:0;left:calc((100% - 96px)/3 + 24px);border-left:1px solid #ddd;pointer-events:none}
+@media(max-width:760px){#step-01 .comparison::after{display:none}}
+/* Updated Figma 432:261: shared decision heading and side-by-side final annotations. */
+#step-01 .comparison{grid-template-columns:42.2fr 57.8fr;grid-template-rows:auto auto auto auto 64px auto auto;column-gap:60px;padding-top:52px;background:#f6f6f9}
+#step-01 .comparison::before{background:#f6f6f9}
+#step-01 .comparison>.figma-comparison-title{grid-column:1/-1;grid-row:1;margin:0 0 36px;font-size:22px;font-weight:700;color:#333}
+#step-01 .comparison>.option{grid-row:2/span 6}
+#step-01 .comparison>.option:last-of-type{grid-column:2}
+#step-01 .comparison>.option>h3{font-size:18px;line-height:1.4;margin-bottom:18px}
+#step-01 .comparison>.option:first-of-type>h3{color:#666}
+#step-01 .comparison .option-copy{max-width:100%}
+#step-01 .comparison .option p{color:#333;line-height:1.4;font-weight:300}
+#step-01 .comparison .option-copy p+p{max-width:417px;margin-top:24px}
+#step-01 .comparison>.option:first-of-type .option-copy{max-width:405px}
+#step-01 .comparison::after{left:calc((100% - 60px)*.422 + 30px);top:88px;border-color:#c8c8c8}
+#step-01 .comparison .phone-pair{column-gap:32px}
+#step-01 .comparison .phone-pair figcaption{font-size:16px;line-height:28px;padding-bottom:20px}
+.final-design{padding-block:52px 64px;border-top:0}
+.final-design-intro{font-size:18px;line-height:1.4;font-weight:300;max-width:940px;color:#333;margin:0}
+.final-design .shipped{max-width:none;column-gap:70px;padding-top:84px}
+.final-design .shipped>article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.16fr);column-gap:24px;align-items:start}
+.final-design .shipped p{grid-column:1;grid-row:1;margin-top:56px;font-size:16px;line-height:1.4;font-weight:300;color:#333}
+.final-design .shipped p strong{font-weight:500;color:#333}
+.final-design .shipped .figma-mockup,.final-design .shipped article:first-child .figma-mockup{grid-column:2;grid-row:1;width:calc(var(--figma-width)*var(--figma-mockup-scale)*1px);max-width:100%;margin:0 auto}
+@media(max-width:760px){
+ #step-01 .comparison{grid-template-columns:1fr;grid-template-rows:none;padding-top:32px}
+ #step-01 .comparison>.figma-comparison-title{grid-column:1;grid-row:auto;margin-bottom:0}
+ #step-01 .comparison>.option{grid-row:auto}
+ #step-01 .comparison>.option:last-of-type{grid-column:1}
+ #step-01 .comparison>.option>h3{font-size:18px}
+ .final-design .shipped{padding-top:40px;gap:48px}
+ .final-design .shipped>article{grid-template-columns:1fr;row-gap:24px}
+ .final-design .shipped p{margin:0;grid-column:1;grid-row:1}
+ .final-design .shipped .figma-mockup,.final-design .shipped article:first-child .figma-mockup{grid-column:1;grid-row:2;max-width:calc(100% - 32px)}
+}
+#step-01 .figma-buy-now::after{content:'';position:absolute;left:5.98%;top:1.73%;width:89.04%;height:84.75%;border-radius:15.02% 12.77% 0 0 / 7.47% 6.35% 0 0;background:rgba(0,0,0,.6);pointer-events:none}
+@media(min-width:761px){
+ #step-01 .comparison .option-copy{display:grid;grid-template-rows:minmax(72px,auto) auto;align-content:start}
+ #step-01 .comparison .option-copy p+p{margin-top:24px}
+}
+@media(min-width:1280px){
+ .final-design .shipped{margin-inline:-64px;column-gap:70px}
+ .final-design .shipped p{white-space:nowrap}
+}
+/* Final checkout: preserve the Figma annotation-to-phone offsets. */
+@media(min-width:1280px){
+ .final-design .shipped{grid-template-columns:734fr 658fr;column-gap:0;margin-inline:-64px}
+ .final-design .shipped>article{grid-template-columns:calc(278px*var(--figma-mockup-scale)) auto;column-gap:calc(9px*var(--figma-mockup-scale))}
+ .final-design .shipped>article+article{grid-template-columns:calc(274px*var(--figma-mockup-scale)) auto;column-gap:calc(44px*var(--figma-mockup-scale))}
+ .final-design .shipped .figma-mockup,.final-design .shipped article:first-child .figma-mockup{justify-self:start;margin:0;max-width:100%}
+ .final-design .shipped article:first-child .figma-mockup{transform:translateY(calc(7px*var(--figma-mockup-scale)))}
+ .final-design .shipped p{margin-top:calc(62px*var(--figma-mockup-scale))}
+}
+@media(min-width:1280px){
+ .final-design .shipped p{font-size:calc(16px*var(--figma-mockup-scale));line-height:1.4}
+}
+/* Final design follows the user-supplied reference image. */
+.final-design{padding-block:56px 80px}
+.final-reference-heading .eyebrow{color:#08c596;font-size:16px;line-height:20px;letter-spacing:1.6px;margin:0 0 12px}
+.final-reference-heading h2{font-size:28px;line-height:1.2;font-weight:600;color:#333;margin:0 0 24px}
+.final-design-intro{font-size:18px;line-height:1.4;max-width:none}
+.final-design .shipped{padding-top:108px}
+.final-design .shipped .final-feature-copy{grid-column:1;grid-row:1;padding-top:12px}
+.final-design .shipped .final-feature-copy h3.badge{display:inline-block;font-size:14px;line-height:20px;font-weight:600;border-radius:20px;background:#08c596;color:#fff;padding:6px 16px;margin:0 0 12px;white-space:nowrap}
+.final-design .shipped .final-feature-copy p{margin:0;font-size:16px;line-height:1.4}
+@media(min-width:1280px){
+ .final-reference-heading{margin-left:-64px}
+ .final-design .shipped{grid-template-columns:734fr 658fr;margin-inline:-38px -64px}
+ .final-design .shipped>article{grid-template-columns:calc(278px*var(--figma-mockup-scale)) auto;column-gap:calc(25px*var(--figma-mockup-scale))}
+ .final-design .shipped>article+article{grid-template-columns:calc(274px*var(--figma-mockup-scale)) auto;column-gap:calc(44px*var(--figma-mockup-scale))}
+ .final-design .shipped .final-feature-copy p{font-size:calc(16px*var(--figma-mockup-scale));white-space:nowrap}
+}
+@media(max-width:760px){
+ .final-design{padding-block:40px 48px}
+ .final-reference-heading h2{font-size:26px}
+ .final-design-intro{font-size:16px}
+ .final-design-intro br{display:none}
+ .final-design .shipped{padding-top:48px}
+ .final-design .shipped .final-feature-copy{padding-top:0;grid-column:1;grid-row:1}
+ .final-design .shipped .final-feature-copy p{white-space:normal}
+}
+/* Option comparison geometry and typography from the supplied screenshot. */
+@media(min-width:761px){
+ #step-01 .comparison{grid-template-columns:42.2fr 57.8fr;column-gap:60px;grid-template-rows:auto auto auto auto 80px auto auto;padding-block:56px 24px}
+ #step-01 .comparison>.figma-comparison-title{font-size:22px;line-height:1.2;margin-bottom:36px}
+ #step-01 .comparison>.option>.badge{font-size:14px;line-height:20px;padding:6px 16px;margin-bottom:14px}
+ #step-01 .comparison>.option>h3{font-size:18px;line-height:1.4;margin-bottom:10px;font-weight:600}
+ #step-01 .comparison .option p{font-size:16px;line-height:1.4;color:#333;font-weight:300}
+ #step-01 .comparison>.option:first-of-type .option-copy{max-width:430px}
+ #step-01 .comparison .option-copy{grid-template-rows:72px auto}
+ #step-01 .comparison .option-copy p+p{margin-top:24px;max-width:430px}
+ #step-01 .comparison .phone-pair{column-gap:32px}
+ #step-01 .comparison .phone-pair figcaption{font-size:16px;line-height:28px;font-weight:600;padding-bottom:24px}
+ #step-01 .comparison .figma-mockup{width:calc(var(--figma-width)*var(--figma-mockup-scale)*1px);max-width:100%}
+ #step-01 .comparison>.option:first-of-type>.figma-mockup{margin-left:calc(25px*var(--figma-mockup-scale));margin-right:0}
+ #step-01 .comparison::after{top:96px;bottom:0;left:calc((100% - 60px)*.422 - 48px);border-color:#999}
+}
+@media(max-width:1279px) and (min-width:761px){
+ #step-01 .comparison-reference-break{display:none}
+ #step-01 .comparison .option-copy{grid-template-rows:minmax(72px,auto) auto}
+}
+@media(max-width:760px){#step-01 .comparison-reference-break{display:none}}
+#step-01 .comparison .option-b-panel .option-copy p+p{margin-top:24px;padding-top:0;border:0}
+/* Use a single divider color throughout the prototype comparison. */
+.prototypes{--prototype-divider:#373839;border-color:var(--prototype-divider)}
+.prototypes .prototype{border-left-color:var(--prototype-divider)}
+.prototypes>.figma-line{background:var(--prototype-divider)}
+.prototypes>.figma-line img{visibility:hidden}
+/* Keep both complete phone frames at their native proportions and connect their actual edges. */
+@media(min-width:761px){
+ #step-01 .comparison .phone-pair{width:calc(652.107px*var(--figma-mockup-scale));max-width:100%;grid-template-columns:299.107fr 310fr;column-gap:calc(43px*var(--figma-mockup-scale));justify-self:start}
+ #step-01 .comparison .phone-pair .figma-mockup{width:100%;max-width:100%;margin:0;overflow:visible}
+ #step-01 .comparison .phone-pair figcaption{padding-bottom:24px}
+}
+#step-01 .figma-buy-now::after{background:rgba(0,0,0,.6)}
+#step-01 .figma-buy-now [data-node-id='432:431']{border-width:1px!important}
+/* Reflections: align the reference line breaks and the right-hand text column. */
+.reflection-reference-line{display:block}
+@media(min-width:1280px){
+ .reflection-heading{grid-template-columns:calc(43.5% - 32px) minmax(0,1fr);column-gap:64px}
+ .reflection-heading .section-title{font-size:54px;line-height:1.2;white-space:nowrap}
+ .reflection-heading .lead{font-size:22px;line-height:1.4;font-weight:300;color:#fff}
+ .reflection-list li{grid-template-columns:40px calc(43.5% - 102px) minmax(0,1fr);column-gap:20px;padding:28px 10px;border-color:#373839}
+ .reflection-list li::before{width:40px;height:40px;font-size:16px}
+ .reflection-list h4{font-size:18px;line-height:1.4;font-weight:600}
+ .reflection-list p{font-size:16px;line-height:1.4;font-weight:300;color:#ccc}
+ .reflection-list p .reflection-reference-line{white-space:nowrap;font-size:clamp(13px,1.03vw,16px)}
+}
+@media(max-width:1279px){
+ .reflection-reference-line{display:inline}
+ .reflection-reference-line+.reflection-reference-line::before{content:' '}
+}
+@media(min-width:1280px){.reflection-list li{grid-template-columns:40px calc(43.5% - 49px) minmax(0,1fr)}}

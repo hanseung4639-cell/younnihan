@@ -1,0 +1,155 @@
+{
+  "reference": "432:261",
+  "slots": [
+    {
+      "slot": "journey-list.png",
+      "node": "557:208",
+      "width": 228.0,
+      "height": 474.0,
+      "assets": [
+        "/page1/assets/figma/52bef.png"
+      ]
+    },
+    {
+      "slot": "journey-product.png",
+      "node": "557:212",
+      "width": 223.0,
+      "height": 473.0,
+      "assets": [
+        "/page1/assets/figma/52bef.png"
+      ]
+    },
+    {
+      "slot": "journey-checkout.png",
+      "node": "557:217",
+      "width": 223.0,
+      "height": 466.0,
+      "assets": [
+        "/page1/assets/figma/retina/557-217.png"
+      ]
+    },
+    {
+      "slot": "journey-form.png",
+      "node": "557:222",
+      "width": 246.0,
+      "height": 591.0,
+      "assets": [
+        "/page1/assets/figma/retina/557-222.png"
+      ]
+    },
+    {
+      "slot": "checkout-original.png",
+      "node": "432:295",
+      "width": 292.0,
+      "height": 622.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-295.png"
+      ]
+    },
+    {
+      "slot": "checkout-fixed.png",
+      "node": "432:417",
+      "width": 301.0,
+      "height": 627.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-417.png",
+        "/page1/assets/figma/retina/432-418.png"
+      ]
+    },
+    {
+      "slot": "buy-now.png",
+      "node": "432:429",
+      "width": 299.107,
+      "height": 632.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-429.png"
+      ]
+    },
+    {
+      "slot": "bottom-sheet.png",
+      "node": "432:427",
+      "width": 310.0,
+      "height": 636.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-427.png"
+      ]
+    },
+    {
+      "slot": "hierarchy-before.png",
+      "node": "562:275",
+      "width": 292.964,
+      "height": 602.0,
+      "assets": [
+        "/page1/assets/figma/retina/562-275.png"
+      ]
+    },
+    {
+      "slot": "hierarchy-after.png",
+      "node": "562:280",
+      "width": 300.0,
+      "height": 616.0,
+      "assets": [
+        "/page1/assets/figma/retina/562-280.png"
+      ]
+    },
+    {
+      "slot": "tooltip.png",
+      "node": "432:532",
+      "width": 230.0,
+      "height": 499.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-532.png"
+      ]
+    },
+    {
+      "slot": "popup.png",
+      "node": "432:528",
+      "width": 230.0,
+      "height": 499.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-528.png"
+      ]
+    },
+    {
+      "slot": "dropdown.png",
+      "node": "432:527",
+      "width": 230.0,
+      "height": 498.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-527.png"
+      ]
+    },
+    {
+      "slot": "discount-detail.png",
+      "node": "432:535",
+      "width": 324.0,
+      "height": 634.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-535.png",
+        "/page1/assets/figma/retina/432-536.png"
+      ]
+    },
+    {
+      "slot": "points-detail.png",
+      "node": "432:533",
+      "width": 309.0,
+      "height": 646.0,
+      "assets": [
+        "/page1/assets/figma/retina/432-533.png",
+        "/page1/assets/figma/retina/432-534.png"
+      ]
+    }
+  ],
+  "svg_assets": [
+    "1e1ec.svg",
+    "3d770.svg",
+    "c79c2.svg",
+    "2063f.svg"
+  ],
+  "export_scale": 3,
+  "detail_export_scale": 3,
+  "retained_original_alpha_slots": [
+    "557:208",
+    "557:212"
+  ]
+}

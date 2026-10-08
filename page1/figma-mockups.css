@@ -1,0 +1,61 @@
+/* Dimensions and source crops from Figma 432:261. Result uses its existing CSS. */
+:root{--figma-mockup-scale:0.878477305}
+.figma-mockup{position:relative;aspect-ratio:var(--figma-width)/var(--figma-height);height:auto;overflow:visible;flex-shrink:0;min-width:0}
+.comparison .phone-pair>figure{min-width:0;grid-template-columns:minmax(0,1fr)}
+.figma-mockup img{margin:0!important;border-radius:0!important}
+.journey .figma-mockup,.comparison .figma-mockup,.hierarchy .figma-mockup,.prototype .figma-mockup,.shipped .figma-mockup{width:calc(var(--figma-width)*var(--figma-mockup-scale)*1px);max-width:100%;height:auto;object-fit:initial}
+.journey .figma-mockup{margin-inline:auto}
+.comparison .figma-mockup{margin:0 auto;align-self:start}
+.comparison>article.option:last-of-type{grid-column:3/span 2}
+.hierarchy .figma-mockup{margin:0 auto;align-self:start}
+.prototype .figma-mockup{margin:42px auto 0}
+.shipped .figma-mockup{margin:32px auto 0}
+.shipped article:first-child .figma-mockup{margin-top:calc(32px + 12px*var(--figma-mockup-scale))}
+.journey-grid{grid-template-columns:228fr 223fr 223fr 301fr 246fr;gap:28px}
+.journey-grid .journey-issues{grid-column:4;grid-row:1}
+.journey-grid .long-form{grid-column:5;grid-row:1}
+.metrics{border-top:1px solid #777;border-bottom:1px solid #777}
+.direction{border-top:1px solid #777;border-bottom:1px solid #777;padding-block:24px}
+.direction>article+article{border-left:1px solid #777;padding-left:32px}
+.comparison{border-bottom:1px solid #777;padding-bottom:32px}
+.comparison>.option:nth-of-type(1)::after{border-color:#777}
+.prototypes{border-top:1px solid #777;border-bottom:1px solid #777}
+.prototype{border-top:0;border-left-color:#777}
+.prototype-copy::after{border-color:#777}
+.final-design{position:relative;isolation:isolate;color:#333;--muted:#666;--subtle:#777;border-top:1px solid #777;padding-bottom:64px}
+.final-design::before{content:"";position:absolute;inset:0 auto 0 50%;width:100vw;transform:translateX(-50%);background:#f6f6f9;z-index:-1}
+.final-design .muted{color:#666}
+.figma-mockup [data-node-id="432:534"]{background:#fff}
+.figma-mockup [data-node-id="432:534"]>div{clip-path:inset(0 3%)}
+.figma-lines{position:relative}
+.metrics,.direction,.comparison,.prototypes{border-top:0;border-bottom:0}
+.figma-line{position:absolute;left:0;right:0;height:1px;overflow:hidden;pointer-events:none}
+.figma-line img{max-width:none;transform:scaleX(var(--figma-line-scale));transform-origin:top left}
+.rule-top{top:0}
+.rule-bottom{bottom:0}
+.comparison-copy-line{top:calc(var(--comparison-phone-top) - 88px*var(--figma-mockup-scale))}
+.prototype-copy-line{top:var(--prototype-copy-bottom)}
+.prototype-copy::after{display:none}
+.figma-flow-curve,.figma-flow-start,.figma-flow-end{position:absolute;pointer-events:none;transform:scale(var(--flow-scale));transform-origin:top left;z-index:1}
+.figma-flow-curve{left:calc(var(--flow-phone-right) + 8px*var(--flow-scale));top:calc(var(--flow-phone-top) + 250px*var(--flow-scale))}
+.figma-flow-start{left:var(--flow-phone-right);top:calc(var(--flow-phone-top) + 561px*var(--flow-scale))}
+.figma-flow-end{left:calc(var(--flow-phone-right) + 50px*var(--flow-scale));top:calc(var(--flow-phone-top) + 246px*var(--flow-scale))}
+.figma-flow-curve img,.figma-flow-start img,.figma-flow-end img{max-width:none}
+@media(max-width:1279px) and (min-width:761px){
+ .journey-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+ .journey-grid .long-form{grid-column:4;grid-row:1}
+ .journey-grid .journey-issues{grid-column:1/-1;grid-row:2}
+}
+@media(max-width:760px){
+ .comparison>article.option:last-of-type{grid-column:1;grid-row:auto}
+ :root{--figma-mockup-scale:0.85}
+ .journey-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+ .journey-grid .long-form{grid-column:auto;grid-row:auto}
+ .journey-grid .journey-issues{grid-column:1/-1;grid-row:auto}
+ .comparison .figma-mockup{width:calc(var(--figma-width)*0.85px)}
+ .prototype .figma-mockup,.hierarchy .figma-mockup,.shipped .figma-mockup{width:calc(var(--figma-width)*0.85px);margin:24px auto 0}
+ .shipped article:first-child .figma-mockup{margin-top:24px}
+ .direction>article+article{border-left:0;padding-left:0;border-top:1px solid #777;padding-top:24px}
+ .final-design{padding-bottom:48px}
+ .prototype-copy-line{display:none}
+}
