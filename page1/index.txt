@@ -70,4 +70,4 @@ f:["$","div",null,{"children":["$","ul",null,{"className":"page-module-scss-modu
 31:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 34:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"IconMark"]
 2f:null
-33:[["$","link","0",{"rel":"icon","href":"/favicon.ico?favicon.6a0b2863.ico","sizes":"32x21","type":"image/x-icon"}],["$","$L34","1",{}]]
+33:[["$","link","0",{"rel":"icon","href":"/favicon.ico?v=20261010","sizes":"60x60","type":"image/x-icon"}],["$","$L34","1",{}]]

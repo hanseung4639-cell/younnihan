@@ -38,4 +38,4 @@ f:["$","script","script-0",{"src":"/_next/static/chunks/e2c40aaa4c20074d.js","as
 18:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 1b:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"IconMark"]
 16:null
-1a:[["$","link","0",{"rel":"icon","href":"/favicon.ico?favicon.6a0b2863.ico","sizes":"32x21","type":"image/x-icon"}],["$","$L1b","1",{}]]
+1a:[["$","link","0",{"rel":"icon","href":"/favicon.ico?v=20261010","sizes":"60x60","type":"image/x-icon"}],["$","$L1b","1",{}]]
