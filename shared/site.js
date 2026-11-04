@@ -1,6 +1,6 @@
 (() => {
   const contact = {
-    email: "han.seung4639@gmail.com",
+    email: "younni.han.designer@gmil.com",
     phone: "834487132",
     linkedin: "https://www.linkedin.com/feed/",
   };
